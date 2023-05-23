@@ -245,29 +245,8 @@
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
       }
-    },
-    {
-      "name": "asmaa",
-      "email": "asmaa@123.com",
-      "phone": "123456789212",
-      "address": {
-        "city": "cairo",
-        "street": "sharabiya",
-        "streetNumber": 123
-      },
-      "id": 11
-    },
-    {
-      "name": "aya",
-      "email": "aya@123.com",
-      "phone": "12345678912",
-      "address": {
-        "city": "cairo",
-        "street": "ayas",
-        "streetNumber": 123
-      },
-      "id": 12
     }
+
   ],
   "albums": [
     {

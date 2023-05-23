@@ -24,7 +24,7 @@ import {HttpClientModule} from '@angular/common/http';
     AlbumsComponent,
     PhotosComponent,
     AddComponent,
-    EditeComponent
+    EditeComponent,
   ],
   imports: [
     BrowserModule,
