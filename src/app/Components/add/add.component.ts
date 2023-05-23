@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, PatternValidator, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
 
@@ -11,7 +11,7 @@ import { UsersService } from 'src/app/Servecis/users.service';
 export class AddComponent {
   constructor(private router: Router, public UserService: UsersService) {}
   myValidation = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    name: new FormControl('', [Validators.required,Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_]{5,15}$/i)]),
     email: new FormControl('', [
       Validators.required,
       Validators.pattern(/^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/),
