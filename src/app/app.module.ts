@@ -11,6 +11,7 @@ import { AlbumsComponent } from './Components/albums/albums.component';
 import { PhotosComponent } from './Components/photos/photos.component';
 import { AddComponent } from './Components/add/add.component';
 import { EditeComponent } from './Components/edite/edite.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,13 @@ import { EditeComponent } from './Components/edite/edite.component';
     AlbumsComponent,
     PhotosComponent,
     AddComponent,
-    EditeComponent
+    EditeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
