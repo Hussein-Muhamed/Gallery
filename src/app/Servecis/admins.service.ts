@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,14 @@ import { Injectable } from '@angular/core';
 })
 export class AdminsService {
 
-  constructor() { }
+  private readonly baseUrlUsers = 'http://localhost:3000/users'
+
+  constructor(private readonly client:HttpClient) { }
+
+  getall(){
+    return this.client.get(this.baseUrlUsers)
+  } 
+  createUser(user:any){
+    return this.client.post(this.baseUrlUsers,user)
+  }
 }
