@@ -10,8 +10,8 @@
       "id": 1,
       "name": "Leanne Graham",
       "username": "Bret",
-      "email": "Sincere@april.biz",
-      "password": 12345678,
+      "email": "hussein@iti.com",
+      "password": "++++++",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -31,28 +31,7 @@
       }
     },
     {
-      "id": 2,
-      "name": "Hamada",
-      "username": "Hamada",
-      "email": "Hamada@iti.net",
-      "password": 12345678,
-      "address": {
-        "street": "133 Gesr El Suez",
-        "suite": "Cairo ",
-        "city": "Wisokyburgh",
-        "zipcode": "90566-7771",
-        "geo": {
-          "lat": "-43.9509",
-          "lng": "-34.4618"
-        }
-      },
-      "phone": "010-692-6593",
-      "website": "anastasia.net",
-      "company": {
-        "name": "Deckow-Crist",
-        "catchPhrase": "Proactive didactic contingency",
-        "bs": "synergize scalable supply-chains"
-      }
+      "id": 2
     },
     {
       "id": 3,

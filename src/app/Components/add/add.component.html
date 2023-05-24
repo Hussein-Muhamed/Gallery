@@ -4,7 +4,8 @@
 
       <div class="registration-form modal-dialog">
         <form [formGroup]="myValidation" class="modal-content">
-          <img src="assets/icos/remove.png" style="width: 30px;height: 30px;position: absolute;right: 30px;top:30px;cursor: pointer;" alt="">
+          <!-- <img src="assets/icos/remove.png" style="width: 30px;height: 30px;position: absolute;right: 30px;top:30px;cursor: pointer;" alt=""> -->
+          <a data-bs-dismiss="modal"> <img src="assets/icos/remove.png" style="width: 30px;height: 30px;position: absolute;right: 30px;top:30px;cursor: pointer;" alt=""></a>
           <div class="text-center m-4">
             <h4>User Information</h4>
           </div>
@@ -35,11 +36,9 @@
               <option>USA 🗽</option>
               <option>KSA 🕋</option>
             </select>
-            <select class="form-control item" formControlName="city">
-              <option value="" disabled selected>Region</option>
-              <option>New York</option>
-              <option>El-Riad</option>
-            </select>
+
+            <input type="text" class="form-control item"  formControlName="street" placeholder="Street">
+
             <input type="number" class="form-control item"  formControlName="streetNumber" placeholder="Street #">
           </div>
 

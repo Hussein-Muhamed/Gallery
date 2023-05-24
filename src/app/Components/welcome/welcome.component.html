@@ -44,7 +44,7 @@
   
                 <!-- Email input -->
                 <div class="form-floating mb-3">
-                  <input formControlName="email" [ngStyle]="{'border-color':(email.valid?'green':(email&&email.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)"   id="input" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <input (input)="clearAlert()" formControlName="email" [ngStyle]="{'border-color':(email.valid?'green':(email&&email.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)"   id="input" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" >
                   <label for="floatingInput">Email address</label>
                 </div>
                 <div *ngIf="email.value && email.invalid">
@@ -54,7 +54,7 @@
   
                 <!-- Password input -->
                 <div class="form-floating mb-4">
-                  <input formControlName="password" [ngStyle]="{'border-color':(password.valid?'green':(password&&password.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)"  id="input" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <input (input)="clearAlert()" formControlName="password" [ngStyle]="{'border-color':(password.valid?'green':(password&&password.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)"  id="input" type="password" class="form-control" id="floatingPassword" placeholder="Password">
                   <label for="floatingPassword">Password</label>
                 </div>
                 <p *ngIf="password.value && password.invalid">
@@ -62,6 +62,11 @@
                 </p>
 
                 
+                <div *ngIf="!credentials">
+                  <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">This Email Already Exists !</p>
+                </div>
+
+                <span></span>
                 <!-- Checkbox -->
                 <div class="form-check d-flex justify-content-center mb-4">
                   <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
@@ -76,7 +81,6 @@
                 </button>
 
                 <span class="mb-3">You have Account:  </span><a (click)="login()" style="font-size:14px;text-decoration: underline;color:rgb(71, 1, 92);cursor: pointer;">Login in</a>
-  
                 <!-- Register buttons -->
                 <div class="text-center">
                   <p>or sign up with:</p>
@@ -101,12 +105,12 @@
           </div>
 
           <!-- login  -->
-          <div  *ngIf=flag class="card bg-glass">
+          <div  *ngIf=flag&&reset class="card bg-glass">
             <div class=" card-body px-4 py-5 px-md-5">
               <form [formGroup]="validation">
                 <!-- Email input -->
                 <div class="form-floating mb-3">
-                  <input formControlName="email" [ngStyle]="{'border-color':(email.valid?'green':(email&&email.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)" id="input" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <input (input)="clearAlert()" formControlName="email" [ngStyle]="{'border-color':(email.valid?'green':(email&&email.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)" id="input" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                   <label for="floatingInput">Email address</label>
                 </div>
                 <div *ngIf="email.value && email.invalid">
@@ -116,13 +120,17 @@
   
                 <!-- Password input -->
                 <div class="form-floating mb-4">
-                  <input formControlName="password" [ngStyle]="{'border-color':(password.valid?'green':(password&&password.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)" id="input" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <input (input)="clearAlert()" formControlName="password" [ngStyle]="{'border-color':(password.valid?'green':(password&&password.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)" id="input" type="password" class="form-control" id="floatingPassword" placeholder="Password">
                   <label for="floatingPassword">Password</label>
                 </div>
                 <div *ngIf="password.value && password.invalid">
                    <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid password!</p>
                 </div>
                 
+                <div *ngIf="!credentials">
+                  <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid Credentials!</p>
+                </div>
+
                 <!-- Checkbox -->
                 <div class="form-check d-flex justify-content-center mb-4">
                   <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
@@ -135,8 +143,60 @@
                 <button type="submit" (click)="validate()" class="btn btn-outline-primary w-100 m-auto btn-block mb-4">
                   Login in
                 </button>
-
+                <a (click)="showReset()" style="font-size:14px;text-decoration: underline;color:rgb(0, 7, 203);cursor: pointer;">Forget Your password</a><br><br>
                 <span class="mb-3">You Don't have Account  </span><a  (click)="signup()" style="font-size:14px;text-decoration: underline;color:rgb(71, 1, 92);cursor: pointer;">Sign up</a>
+                
+                
+              </form>
+            </div>
+          </div>
+
+          <!-- reset Password -->
+          <div *ngIf=!reset  class="card bg-glass">
+            <div class="card-body px-4 py-5 px-md-5">
+              <form [formGroup]="validation">
+  
+                <!-- Email input -->
+                <div class="form-floating mb-3">
+                  <input (input)="clearAlert()" formControlName="email" [ngStyle]="{'border-color':(email.valid?'green':(email&&email.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)"   id="input" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" >
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div *ngIf="email.value && email.invalid">
+                  <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid Email!</p>
+                </div>
+
+  
+                <!-- Password input -->
+                <div class="form-floating mb-4">
+                  <input (input)="clearAlert()" formControlName="newPassword" [ngStyle]="{'border-color':(password.valid?'green':(password&&password.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)"  id="input" type="password" class="form-control" id="floatingPassword" placeholder="New Password">
+                  <label for="floatingPassword">Enter New Password</label>
+                </div>
+                <p *ngIf="newPassword.value && newPassword.invalid">
+                  <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid Password!</p>
+                </p>
+
+                <!-- Password input -->
+                <div class="form-floating mb-4">
+                  <input (input)="clearAlert()" formControlName="resetNewPassword" [ngStyle]="{'border-color':(password.valid?'green':(password&&password.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)"  id="input" type="password" class="form-control" id="floatingPassword" placeholder="Enter New Password again">
+                  <label for="floatingPassword">Enter New Password Again</label>
+                </div>
+                <p *ngIf="passwordNotMatched">
+                  <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Password Not Match !</p>
+                </p>
+
+                <!-- passwords match -->
+                <div *ngIf="!credentials">
+                  <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">This Email Already Exists !</p>
+                </div>
+  
+                <div *ngIf="emailNotExists">
+                  <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">This Email Not Exists !</p>
+                </div>
+
+                <!-- Reset button -->
+                <button type="submit" class="btn btn-outline-primary w-100 m-auto btn-block mb-4" (click)="resetPassword()">
+                  Reset Password
+                </button>
               </form>
             </div>
           </div>
@@ -146,8 +206,3 @@
       </div>
     </div>
 </section>
-
-
-<!-- //TODO -->
-<!-- large margin-top:5rem 
-     small margin-top:1rem-->

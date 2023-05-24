@@ -1,7 +1,7 @@
 
-<div *ngIf=admin class="container text-light " style="background-color: rgb(134 0 82)">
+<div *ngIf=admin class="container-fluid text-light" style="background-color: rgb(111, 0, 69);opacity:1;position: fixed;">
     <div id="row" class="row  justify-content-center align-items-center">
-        <div class="col-12 col-md-3 fs-5 text-center">
+        <div id="name" class="col-12 col-md-3 fs-5 text-center">
             <span>{{user.name}}</span>
         </div>
         <div class="col-12 col-md-1">
@@ -14,7 +14,7 @@
         <div class="col-12 col-md-1">
             <p id="boo" class="fs-1 text-center">|</p>
         </div>
-        <div class="col-12 col-md-3 fs-5 text-center">
+        <div id="address" class="col-12 col-md-3 fs-5 text-center">
             <p style="margin-bottom: 0px;">Address</p>
             <p style="margin-bottom: 0px;">{{user.address.street}} {{user.address.suite}}</p>
         </div>

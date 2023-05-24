@@ -1,34 +1,46 @@
-
+*{
+  font-family:'Welcome'
+}
 
 .registration-form form{
-  background-color: #fff;
+  background-color: #f4f4f4;
   max-width: 600px;
   margin: auto;
+  margin-top: 126px !important;
   padding: 50px 70px;
-  border-radius: 30px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+  border-radius: 15px;
+  box-shadow: 0px 2px 10px rgb(19 19 19 / 87%);
 }
 
 h4{
-  color: rgb(148 27 101);;
+  color:rgb(148 27 101);
 }
 .registration-form .item{
-  border-radius: 10px;
+  border-radius: 20px;
   margin-bottom: 15px;
   padding: 10px 20px;
-  background-color: #F2E6FF;
+  text-align: center;
+  background-color: #ffffff;
 }
 
 .registration-form .create-account{
-  border-radius: 10px;
-  width: 100%;
+  border-radius: 20px;
+  width: 75%;
   padding: 10px 20px;
   font-size: 18px;
   font-weight: bold;
-  background-color: rgb(148 27 101);
+  background-color: rgb(255, 255, 255);
+  border:1px solid rgba(0, 0, 0, 0.236) !important;
   border: none;
-  color: white;
+  color: rgb(148 27 101);
   margin-top: 20px;
+}
+
+.registration-form .create-account:hover{
+  background-color: rgb(148 27 101);
+  color:white;
+  border:0px;
+  width: 100%;
 }
 
 

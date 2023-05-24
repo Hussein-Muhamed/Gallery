@@ -11,4 +11,10 @@
     #row{
         gap:10px
     }
+    #name{
+        margin-top: 10px;
+    }
+    #address{
+        margin-bottom: 10px;
+    }
 }

@@ -13,6 +13,11 @@ export class UsersService {
   GetUserByID(id:any){
     return this.myClient.get(this.Base_URL+"/"+id);
   }
+
+  GetUserByEmail(email:any){
+    return this.myClient.get(`${this.Base_URL}?email=${email}`)
+  }
+
   AddUser(NewUser:any){
     return this.myClient.post(this.Base_URL,NewUser);
   }

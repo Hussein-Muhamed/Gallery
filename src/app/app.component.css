@@ -3,7 +3,9 @@
     background-image: url('src/assets/images/bg1.jpg');
 }
 
-
+*{
+  caret-color: transparent;
+}
 
 /* Let's Test all of Those 🤸🏻‍♂️🔥 */
 /* 

@@ -7,10 +7,77 @@ td{
   font-family: Welcome;
 }
 
-td:nth-child(1),th:nth-child(1){
+td:nth-child(1){
   padding-left:25px;
+}
+th:nth-child(1){
+  padding-left: 1px;
 }
 
 td:last-child,th:last-child{
   padding-right:25px;
+}
+
+
+#cont{
+  margin-top:110px
+}
+
+tr:nth-child(even) {background-color: #f4f4f47f;}
+
+tbody tr:hover{
+  cursor: pointer;
+}
+
+@media (max-width:1400px){
+  td{
+    padding:20px
+  }
+}
+
+@media (max-width:1200px){
+  td{
+    padding:17px
+  }
+  thead tr {
+    font-size:20px !important
+  }
+
+  tbody tr{
+    font-size:17px !important
+  }
+}
+
+@media (max-width:992px){
+  #email{
+    display:none
+  }
+}
+
+@media (max-width:768px) {
+  #cont{
+    margin-top: 220px;
+  }
+  #id,#phone{
+    display:none
+  }
+  tbody tr{
+    font-size:15px !important
+  }
+}
+
+@media (max-width:576px) {
+  #address{
+    display:none
+  }
+}
+
+@media (max-width:342px){
+  td{
+    padding:5px
+  }
+  img{
+    width: 30px !important;
+    height: 32px !important;
+  }
 }
