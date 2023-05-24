@@ -29,7 +29,7 @@ a {
     a:hover,a:focus {
         scale: 1.2;
         color: rgb(148 27 101);
-        text-shadow: 1px 1px 3px rgb(236, 155, 205);
+        text-shadow: 1px 1px 30px rgb(227, 146, 191);
         opacity:1;
     }
 }
@@ -38,7 +38,7 @@ a {
     a:hover {
         scale: 1;
         color: rgb(148 27 101);
-        text-shadow: 1px 1px 10px rgb(236, 155, 205);
+        text-shadow: 1px 1px 30px rgb(227, 146, 191);
         ;
     }
 }
@@ -48,7 +48,10 @@ a {
 
 a:focus {
     color: rgb(148 27 101);
-    text-shadow: 1px 1px 10px rgb(236, 155, 205);
+    text-shadow: 1px 1px 30px rgb(236, 155, 205);
     ;
+}
+b:hover{
+
 }
 

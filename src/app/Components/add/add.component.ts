@@ -18,11 +18,11 @@ export class AddComponent {
     ]),
     phone: new FormControl('', [
       Validators.required,
-      Validators.pattern(/^(\d{11})/),
+      Validators.pattern('^01[0-2,5]{1}[0-9]{8}$'),
     ]),
     city: new FormControl('', [Validators.required]),
     street: new FormControl('', [Validators.required]),
-    streetNumber: new FormControl('', [Validators.required]),
+    streetNumber: new FormControl('', [Validators.required,Validators.pattern('^[1-9]*$')]),
   });
   get Name() {
     return this.myValidation.controls['name'];
