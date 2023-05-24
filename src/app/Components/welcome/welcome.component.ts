@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { AdminsService } from 'src/app/Servecis/admins.service';
+import { UsersService } from 'src/app/Servecis/users.service';
 
 @Component({
   selector: 'app-welcome',
@@ -13,9 +13,9 @@ export class WelcomeComponent implements OnInit {
 
   baseUrl = 'http://localhost:3000/users'
 
-  constructor(public loginService: AdminsService) {}
+  constructor(public loginService: UsersService) {}
   ngOnInit() {
-    this.loginService.getall().subscribe({
+    this.loginService.GetAllUsers().subscribe({
       next: (data) => {
         this.users = data;
       },
@@ -121,10 +121,11 @@ export class WelcomeComponent implements OnInit {
           email: this.validation.controls['email'].value,
           password: this.validation.controls['password'].value,
         };
-        this.loginService.createUser(user).subscribe();
+        this.loginService.AddUser(user).subscribe();
         console.log('Successfully');
+      } else{
+        console.log('Invalid data!');
       }
-      console.log('Invalid data!');
     }
   }
 }

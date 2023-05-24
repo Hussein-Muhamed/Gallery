@@ -1,1 +1,36 @@
-<p>profile works!</p>
+
+<div *ngIf=admin class="container text-light " style="background-color: rgb(148 27 101)">
+    <div id="row" class="row  justify-content-center align-items-center">
+        <div class="col-12 col-md-3 fs-5 text-center">
+            <span>{{user.name}}</span>
+        </div>
+        <div class="col-12 col-md-1">
+            <p id="boo" class="fs-1 text-center pt-1">|</p>
+        </div>
+        <div class="col-12 col-md-3 fs-5 text-center">
+            <p style="margin-bottom: 0px;">{{user.email}}</p>
+            <p style="margin-bottom: 0px;">{{user.phone}}</p>
+        </div>
+        <div class="col-12 col-md-1">
+            <p id="boo" class="fs-1 text-center">|</p>
+        </div>
+        <div class="col-12 col-md-3 fs-5 text-center">
+            <p style="margin-bottom: 0px;">Address</p>
+            <p style="margin-bottom: 0px;">{{user.address.street}} {{user.address.suite}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div *ngIf=!admin  class="container-fluid" style="background-color: rgb(148 27 101);">
+    <div class="row p-4 justify-content-around">
+        <div class="col-12 col-md-6 col-lg-2 text-center " >
+            <div class="mb-0 fs-4 text-light">Users</div>
+        </div> 
+        <div class="col-12 col-md-4 col-lg-2 text-center">
+            <div class="btn btn-light w-100 m-0 ">+ Add User</div>
+        </div>
+    </div>
+</div>

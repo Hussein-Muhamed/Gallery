@@ -1,6 +1,11 @@
+*{
+    font-family: Welcome;
+}
+
 a {
     font-size: 14px;
-    font-weight: 700
+    font-weight: 700;
+    opacity:0.8
 }
 
 .superNav {
@@ -21,11 +26,11 @@ a {
 }
 @media screen and (min-width:930px) {
   
-    a:hover {
+    a:hover,a:focus {
         scale: 1.2;
         color: rgb(148 27 101);
-        text-shadow: 1px 1px 10px rgb(236, 155, 205);
-        ;
+        text-shadow: 1px 1px 3px rgb(236, 155, 205);
+        opacity:1;
     }
 }
 @media screen and (max-width:929px) {

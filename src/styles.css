@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@font-face {
+    font-family: Welcome;
+    src: url('assets/fonts/Bree_Serif/BreeSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: Home-Italic ;
+    src: url('assets/fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: Header;
+    src: url('assets/fonts/Secular_One/SecularOne-Regular.ttf');
+}
+

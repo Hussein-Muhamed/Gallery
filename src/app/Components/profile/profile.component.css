@@ -1,0 +1,14 @@
+*{
+    font-family: Welcome;
+}
+
+@media (max-width:768px){
+    
+    #boo{
+        display: none;
+        gap:40px
+    }
+    #row{
+        gap:10px
+    }
+}
