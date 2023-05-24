@@ -13,6 +13,7 @@ import { AddComponent } from './Components/add/add.component';
 import { EditeComponent } from './Components/edite/edite.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { FooterComponent } from './Components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {HttpClientModule} from '@angular/common/http';
     PhotosComponent,
     AddComponent,
     EditeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
