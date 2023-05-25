@@ -9,12 +9,13 @@ import { UsersService } from 'src/app/Servecis/users.service';
   styleUrls: ['./edite.component.css']
 })
 export class EditeComponent {
-  ID:number=11;
+  ID:any;
   User:any;
   constructor(private router: Router,myRoute:ActivatedRoute,public UsersService:UsersService){
-    // this.ID = myRoute.snapshot.params["id"];
+     this.ID = myRoute.snapshot.params["id"];
   }
   ngOnInit(): void {
+    console.log("hi");
     this.UsersService.GetUserByID(this.ID).subscribe({
       next:(data)=>{
         this.User=data;

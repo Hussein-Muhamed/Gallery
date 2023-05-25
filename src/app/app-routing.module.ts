@@ -15,7 +15,9 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
-      { path: 'landing', component: LandingComponent },
+      { path: 'landing', component: LandingComponent,children:[
+        { path: 'edite/:id', component: EditeComponent }
+      ] },
       {
         path: 'Profile',
         component: ProfileComponent,

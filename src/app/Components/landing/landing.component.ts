@@ -9,6 +9,7 @@ import { UsersService } from 'src/app/Servecis/users.service';
 export class LandingComponent {
   constructor(public UserService: UsersService) {}
   Users: any;
+
   ngOnInit(): void {
     this.UserService.GetAllUsers().subscribe({
       next: (data) => {
@@ -20,5 +21,7 @@ export class LandingComponent {
       },
     });
   }
- 
+
+
+
 }
