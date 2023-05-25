@@ -15,7 +15,7 @@ export class EditeComponent {
      this.ID = myRoute.snapshot.params["id"];
   }
   ngOnInit(): void {
-    console.log("hi");
+    console.log("hi here");
     this.UsersService.GetUserByID(this.ID).subscribe({
       next:(data)=>{
         this.User=data;

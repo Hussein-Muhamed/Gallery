@@ -8,6 +8,7 @@ import { AlbumsComponent } from './Components/albums/albums.component';
 import { HomeComponent } from './Components/home/home.component';
 import { PhotosComponent } from './Components/photos/photos.component';
 import { AddComponent } from './Components/add/add.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -28,7 +29,7 @@ const routes: Routes = [
       },
     ],
   },
-  // { path: '**',  component: WelcomeComponent},
+  { path: '**',  component: ErrorComponent},
 ];
 
 @NgModule({
