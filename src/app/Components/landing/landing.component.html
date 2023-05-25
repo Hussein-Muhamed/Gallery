@@ -5,9 +5,9 @@
   <div class="row p-4 justify-content-around">
       <div class="col-12 col-md-6 col-lg-2 text-center " >
           <div class="mb-0 fs-4 text-light">Users</div>
-      </div> 
+      </div>
       <div class="col-12 col-md-4 col-lg-2 text-center">
-          <div data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light w-100 m-0 ">+ Add User</div>
+          <div data-bs-toggle="modal" data-bs-target="#addModal" class="btn btn-light w-100 m-0 ">+ Add User</div>
       </div>
   </div>
 </div>
@@ -35,8 +35,11 @@
                   <td id="email">{{u.email}}</td>
                   <td id="phone">{{u.phone}}</td>
                   <td id="address">{{u.address.suite+" " + u.address.street+" " + u.address.city}}</td>
-                  <td><img src="assets/icos/edit.png" style="width: 35px;height: 37px;; cursor:pointer"></td>
+
+                  <td  routerLink="/landing/edite/{{u.id}}" ><img src="assets/icos/edit.png" style="width: 35px;height: 37px;; cursor:pointer" ></td>
+
                   <td data-bs-target="#deleteModal" data-bs-toggle="modal" ><img src="assets/icos/trash.png" style="width: 35px;height: 37px; cursor:pointer"></td>
+
               </tr>
           </tbody>
       </table>
@@ -68,4 +71,10 @@
 </div>
 
 <app-add ></app-add>
+
+
+
+
+
+
 
