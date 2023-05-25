@@ -1,7 +1,7 @@
 
-<div *ngIf=admin class="container-fluid text-light" style="background-color: rgb(111, 0, 69);opacity:1;position: fixed;">
+<div *ngIf="user" class="container-fluid text-light Btangany" style="z-index: 1; opacity:1;position: fixed;">
     <div id="row" class="row  justify-content-center align-items-center">
-        <div id="name" class="col-12 col-md-3 fs-5 text-center">
+        <div id="x" class="col-12 col-md-3 fs-5 text-center">
             <span>{{user.name}}</span>
         </div>
         <div class="col-12 col-md-1">
@@ -22,15 +22,4 @@
 </div>
 
 
-
-
-<div *ngIf=!admin  class="container-fluid" style="background-color: rgb(148 27 101);">
-    <div class="row p-4 justify-content-around">
-        <div class="col-12 col-md-6 col-lg-2 text-center " >
-            <div class="mb-0 fs-4 text-light">Users</div>
-        </div> 
-        <div class="col-12 col-md-4 col-lg-2 text-center">
-            <div class="btn btn-light w-100 m-0 ">+ Add User</div>
-        </div>
-    </div>
-</div>
+<router-outlet ></router-outlet>

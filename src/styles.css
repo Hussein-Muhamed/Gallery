@@ -16,3 +16,16 @@
     src: url('assets/fonts/Secular_One/SecularOne-Regular.ttf');
 }
 
+
+#cont{
+    margin-top:110px
+  }
+  
+@media (max-width:768px) {
+    #cont{
+      margin-top: 220px;
+    }
+}
+.Btangany{
+    background-color: rgb(148 27 101);
+}

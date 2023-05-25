@@ -1,1 +1,14 @@
-<p>photos works!</p>
+<main id="cont" role="main">
+    <div class="album py-5 ">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="row col-10 ">
+                <div *ngFor="let photo of Photos" class="col-md-2">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src={{photo.url}}
+                            alt="Card image cap">
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</main>
