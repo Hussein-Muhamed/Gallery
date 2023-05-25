@@ -14,6 +14,7 @@ import { EditeComponent } from './Components/edite/edite.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './Components/footer/footer.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FooterComponent } from './Components/footer/footer.component';
     AddComponent,
     EditeComponent,
     FooterComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,

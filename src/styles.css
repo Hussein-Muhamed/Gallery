@@ -16,3 +16,8 @@
     src: url('assets/fonts/Secular_One/SecularOne-Regular.ttf');
 }
 
+@font-face {
+    font-family:Error;
+    src:url('src/assets/fonts/Amatic_SC/AmaticSC-Bold.ttf')
+}
+

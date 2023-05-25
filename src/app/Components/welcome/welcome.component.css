@@ -83,6 +83,31 @@
     height: 40px;
   }
 
+  img:hover {
+    animation: dance 1s infinite linear;
+}
+
+@keyframes dance {
+    0%{
+        scale:1;
+        transform:rotate(0deg)
+    }
+    50%{
+        scale:1.1;
+        transform:rotate(-10deg)
+    }
+    80%{
+        scale:1.1;
+        transform:rotate(10deg)
+    }
+    100%{
+        scale:1;
+        transform:rotate(0deg)
+    }
+
+}
+
+
  @media (min-width:992px){
   .background-radial-gradient {
     height: 100vh;
