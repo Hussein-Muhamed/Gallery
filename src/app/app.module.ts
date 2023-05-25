@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ErrorComponent } from './error/error.component';
+import { HomeComponent } from './Components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ErrorComponent } from './error/error.component';
     EditeComponent,
     FooterComponent,
     ErrorComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

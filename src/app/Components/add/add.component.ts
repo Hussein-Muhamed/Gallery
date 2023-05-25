@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, PatternValidator, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  PatternValidator,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
 
@@ -9,12 +14,17 @@ import { UsersService } from 'src/app/Servecis/users.service';
   styleUrls: ['./add.component.css'],
 })
 export class AddComponent {
-  constructor(private router: Router, public UserService: UsersService) {}
+  constructor(private router: Router, public UserService: UsersService) {
+    this.myValidation.controls['name'].setValue("");
+  }
   myValidation = new FormGroup({
-    name: new FormControl('', [Validators.required,Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_]{5,15}$/i)]),
+    name: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_]{5,15}$/i),
+    ]),
     email: new FormControl('', [
       Validators.required,
-      Validators.pattern(/^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/),
+      Validators.pattern(/^([a-zA-Z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/),
     ]),
     phone: new FormControl('', [
       Validators.required,
@@ -22,7 +32,10 @@ export class AddComponent {
     ]),
     city: new FormControl('', [Validators.required]),
     street: new FormControl('', [Validators.required]),
-    streetNumber: new FormControl('', [Validators.required,Validators.pattern('^[1-9]*$')]),
+    streetNumber: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[1-9]*$'),
+    ]),
   });
   get Name() {
     return this.myValidation.controls['name'];
@@ -50,7 +63,7 @@ export class AddComponent {
     );
   }
 
-  Add() {
+  validate() {
     if (
       this.Name.valid &&
       this.Email.valid &&
@@ -59,21 +72,33 @@ export class AddComponent {
       this.Street.valid &&
       this.Street_Num.valid
     ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  Add() {
+    if (this.validate()) {
       let address = {
         city: this.City.value,
+
         street: this.Street.value,
-        streetNumber: this.Street_Num.value,
+
+        suite: this.Street_Num.value,
       };
+
       let newUser = {
         name: this.Name.value,
+
         email: this.Email.value,
+
         phone: this.Phone.value,
+
         address,
       };
 
-
-      this.UserService.AddUser(newUser).subscribe();
-      // this.router.navigate(['/users']);
+      this.UserService.AddUser(newUser).subscribe(); // this.router.navigate(['/users']);
     }
   }
 }

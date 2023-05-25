@@ -1,102 +1,19 @@
 
-<main role="main">
-  <div class="album py-5 bg-light">
+<main id="cont" role="main">
+  <div class="album py-5 ">
     <div class="container d-flex justify-content-center align-items-center">
-      <div class="row col-8 ">
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="../../../assets/images/MicrosoftTeams-image.png" alt="Card image cap">
+      <div class="row col-12 col-lg-9  ">
+        <div *ngFor="let album of Albums" class="col-md-4 col-sm-6"  >
+          <div (click)="navigate(album.id)" *ngIf="Photos" routerLink="/Profile/Album/1" class="card mb-4 box-shadow  " style="height:90%;"   >
+            <img class="card-img-top" src="assets/images/MicrosoftTeams-image.png" alt="Card image cap">
             <div class="card-body text-center">
-              <h4>Album 1</h4>
-              <h5>15</h5>
+              <h4>{{album.title}}</h4>
+              <h5 >{{getphotos(album.id)}}</h5>
               <p>photos</p>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="../../../assets/images/MicrosoftTeams-image.png" alt="Card image cap">
-            <div class="card-body text-center">
-              <h4>Album 1</h4>
-              <h5>15</h5>
-              <p>photos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="../../../assets/images/MicrosoftTeams-image.png" alt="Card image cap">
-            <div class="card-body text-center">
-              <h4>Album 1</h4>
-              <h5>15</h5>
-              <p>photos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="../../../assets/images/MicrosoftTeams-image.png" alt="Card image cap">
-            <div class="card-body text-center">
-              <h4>Album 1</h4>
-              <h5>15</h5>
-              <p>photos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="../../../assets/images/MicrosoftTeams-image.png" alt="Card image cap">
-            <div class="card-body text-center">
-              <h4>Album 1</h4>
-              <h5>15</h5>
-              <p>photos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="../../../assets/images/MicrosoftTeams-image.png" alt="Card image cap">
-            <div class="card-body text-center">
-              <h4>Album 1</h4>
-              <h5>15</h5>
-              <p>photos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="../../../assets/images/MicrosoftTeams-image.png" alt="Card image cap">
-            <div class="card-body text-center">
-              <h4>Album 1</h4>
-              <h5>15</h5>
-              <p>photos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="../../../assets/images/MicrosoftTeams-image.png" alt="Card image cap">
-            <div class="card-body text-center">
-              <h4>Album 1</h4>
-              <h5>15</h5>
-              <p>photos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="../../../assets/images/MicrosoftTeams-image.png" alt="Card image cap">
-            <div class="card-body text-center">
-              <h4>Album 1</h4>
-              <h5>15</h5>
-              <p>photos</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
-
 </main>
-

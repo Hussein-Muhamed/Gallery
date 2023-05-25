@@ -10,4 +10,7 @@ export class AlbumsService {
   GetAllAlbums(){
     return this.myClient.get(this.Base_URL);
   }
+  GetLbumssByUserId(id :any){
+    return   this.myClient.get(`${this.Base_URL}?userId=${id}`);
+   }
 }

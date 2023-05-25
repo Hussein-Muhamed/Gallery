@@ -2,6 +2,11 @@
     font-family: Welcome;
 }
 
+
+#cont{
+    margin-top:110px
+  }
+  
 @media (max-width:768px){
     
     #boo{
@@ -11,10 +16,15 @@
     #row{
         gap:10px
     }
-    #name{
+    #x{
         margin-top: 10px;
     }
     #address{
         margin-bottom: 10px;
     }
 }
+
+#cont{
+    margin-top:110px
+  }
+  

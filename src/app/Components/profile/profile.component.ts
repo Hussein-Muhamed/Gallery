@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,Input,OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
 
@@ -11,10 +11,11 @@ export class ProfileComponent implements OnInit {
 
   admin = true
   user:any
-  id = 2
+  id :any
 
   constructor(public userService:UsersService, public router:ActivatedRoute){
-    // this.id = router.snapshot.params['id']
+    this.id =  this.router.snapshot.firstChild?.params['id'] ;
+     console.log("id" , this.id)
   }
 
   ngOnInit() :void{
@@ -23,4 +24,8 @@ export class ProfileComponent implements OnInit {
       error:(err)=>{console.log(err);}
     })
   }
+  onOutletLoaded(component:any) {
+   console.log(component);
+    component.id = this.id;
+} 
 }
