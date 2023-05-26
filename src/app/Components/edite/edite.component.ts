@@ -3,19 +3,26 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
 
+
 @Component({
   selector: 'app-edite',
   templateUrl: './edite.component.html',
   styleUrls: ['./edite.component.css']
 })
+
 export class EditeComponent {
   ID:any;
   User:any;
   constructor(private router: Router,myRoute:ActivatedRoute,public UsersService:UsersService){
      this.ID = myRoute.snapshot.params["id"];
   }
+   x :any ;
   ngOnInit(): void {
-    console.log("hi");
+   this.x = document.getElementById('editModal');
+   this.x.addEventListener("hidden.bs.modal" , ()=>{
+  this.router.navigate(["/landing"]);
+   this.x.modal.show();
+     });
     this.UsersService.GetUserByID(this.ID).subscribe({
       next:(data)=>{
         this.User=data;
@@ -24,7 +31,7 @@ export class EditeComponent {
         this.myValidation.get('phone')?.setValue(this.User.phone);
         this.myValidation.get('city')?.setValue(this.User.address.city);
         this.myValidation.get('street')?.setValue(this.User.address.street);
-        this.myValidation.get('streetNumber')?.setValue(this.User.address.streetNumber);
+        this.myValidation.get('streetNumber')?.setValue(this.User.address.suite);
       },
       error:(err)=>{console.log(err)}
     });
@@ -35,7 +42,7 @@ export class EditeComponent {
     name: new FormControl('', [Validators.required,Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_]{5,15}$/i)]),
     email: new FormControl('', [
       Validators.required,
-      Validators.pattern(/^([a-z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/),
+      Validators.pattern(/^([a-zA-Z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/),
     ]),
     phone: new FormControl('', [
       Validators.required,
@@ -72,6 +79,7 @@ export class EditeComponent {
   }
 
   Update() {
+
     if (
       this.Name.valid &&
       this.Email.valid &&
@@ -83,7 +91,7 @@ export class EditeComponent {
       let address = {
         city: this.City.value,
         street: this.Street.value,
-        streetNumber: this.Street_Num.value,
+        suite: this.Street_Num.value,
       };
       let newUser = {
         name: this.Name.value,
@@ -91,8 +99,11 @@ export class EditeComponent {
         phone: this.Phone.value,
         address,
       };
+
       this.UsersService.UpdateUser(this.ID,newUser).subscribe();
-      // this.router.navigate(['/students']);
+
+      this.router.navigate(['/landing']);
+         this.x.dispatchEvent("data.bs.dismiss")
     }
 
   }
