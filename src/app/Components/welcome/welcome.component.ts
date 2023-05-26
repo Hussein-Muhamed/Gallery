@@ -123,7 +123,7 @@ export class WelcomeComponent {
         this.user = this.user[0];
 
         if (!this.user) {
-          if (this.validation.valid) {
+          if (this.email.valid && this.password.valid && this.fname.valid && this.lname.valid) {
             let user = {
               name:
                 this.validation.controls['fname'].value +
@@ -135,13 +135,13 @@ export class WelcomeComponent {
             };
             this.srv.AddUser(user).subscribe();
             console.log('Successfully');
-            this.credentials = true;
+            this.flag = true;
           } else {
             console.log('Invalid data!');
           }
         } else {
           console.log('This Email is Already Exist !!');
-          this.credentials = false;
+          this.flag = false;
         }
       },
       error: (err) => {

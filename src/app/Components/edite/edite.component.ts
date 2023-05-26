@@ -12,7 +12,6 @@ import { UsersService } from 'src/app/Servecis/users.service';
 export class EditeComponent {
   ID:any;
   User:any;
-  
   constructor(private router: Router,myRoute:ActivatedRoute,public UsersService:UsersService){
      this.ID = myRoute.snapshot.params["id"];
      console.log(this.ID);
@@ -102,11 +101,12 @@ export class EditeComponent {
         phone: this.Phone.value,
         address,
       };
-
-      this.UsersService.UpdateUser(this.ID,newUser).subscribe();
-      this.router.navigate(['/landing']);
+      this.UsersService.UpdateUser(this.ID,newUser).subscribe(
+        {next:()=>{ this.router.navigate(['/landing']);}}
+      ); 
+    
      
-         console.log("ddddddddddddddddddddddddddddddddddddddddd" , this.ID);
+ 
     }
   
   }

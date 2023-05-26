@@ -12,10 +12,11 @@ import { PhotosComponent } from './Components/photos/photos.component';
 import { AddComponent } from './Components/add/add.component';
 import { EditeComponent } from './Components/edite/edite.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './Components/home/home.component';
+import { RemoveComponent } from './Components/remove/remove.component';
 
 @NgModule({
   declarations: [
@@ -31,15 +32,16 @@ import { HomeComponent } from './Components/home/home.component';
     FooterComponent,
     ErrorComponent,
     HomeComponent,
+    RemoveComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

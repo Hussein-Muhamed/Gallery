@@ -9,6 +9,7 @@ import { HomeComponent } from './Components/home/home.component';
 import { PhotosComponent } from './Components/photos/photos.component';
 import { AddComponent } from './Components/add/add.component';
 import { ErrorComponent } from './error/error.component';
+import { RemoveComponent } from './Components/remove/remove.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: 'landing', component: LandingComponent,children:[
-        { path: 'edite/:id', component: EditeComponent }
+        { path: 'edite/:id', component: EditeComponent },
+        { path:'delete/:id',component: RemoveComponent}
       ] },
       {
         path: 'Profile',

@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
-<div   class="container-fluid Btangany" style="position: fixed;">
+<div class="container-fluid Btangany" style="position: fixed;font-family: 'Welcome';">
   <div class="row p-4 justify-content-around">
       <div class="col-12 col-md-6 col-lg-2 text-center " >
           <div class="mb-0 fs-4 text-light">Users</div>
@@ -12,7 +12,7 @@
   </div>
 </div>
 <div id="cont" class="container " >
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center " >
     <div class="col-12">
       <div class=" user-dashboard-info-box table-responsive mt-md-4  mt-sm-3 p-4 bg-white shadow-sm">
 
@@ -38,8 +38,7 @@
 
                   <td  routerLink="/landing/edite/{{u.id}}" data-bs-target="#editModal" data-bs-toggle="modal" ><img src="assets/icos/edit.png" style="width: 35px;height: 37px;; cursor:pointer"></td>
 
-                  <td data-bs-target="#deleteModal" data-bs-toggle="modal" ><img src="assets/icos/trash.png" style="width: 35px;height: 37px; cursor:pointer"></td>
-
+                  <td routerLink="/landing/delete/{{u.id}}" data-bs-target="#deleteModal" data-bs-toggle="modal" data-bs-target="#deleteModal"><img src="assets/icos/trash.png" style="width: 35px;height: 37px; cursor:pointer"></td>
               </tr>
           </tbody>
       </table>
@@ -49,31 +48,10 @@
   </div>
 </div>
 
-<!-- Modal -->
-<div class="modal " id="deleteModal">
- <div class="modal-dialog">
-  <div class="modal-content">
-   <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-    </button>
-   </div>
-   <div class="modal-body">
-    <p>Are you sure you want to delete?</p>
-  </div>
-  <div class="modal-footer">
-   <button type="button" class="btn btn-secondary" id="close-modal">No</button>
-    <button type="button" class="btn btn-danger">Yes</button>
-   </div>
-  </div>
- </div>
-</div>
 
-<app-add ></app-add>
-<router-outlet style="z-index: 1; "></router-outlet>
+<app-add (myevent)="addnewUser($event)" (activate)="EditUser($event)"></app-add>
+<router-outlet (deactivate)="EditUser($event)"></router-outlet>
 
-<router-outlet ></router-outlet>
 
 
 
