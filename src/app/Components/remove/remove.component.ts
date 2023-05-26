@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UsersService } from '../Servecis/users.service';
+import { UsersService } from '../../Servecis/users.service';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({

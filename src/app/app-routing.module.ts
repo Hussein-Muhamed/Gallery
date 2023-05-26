@@ -9,7 +9,8 @@ import { HomeComponent } from './Components/home/home.component';
 import { PhotosComponent } from './Components/photos/photos.component';
 import { AddComponent } from './Components/add/add.component';
 import { ErrorComponent } from './error/error.component';
-import { RemoveComponent } from './remove/remove.component';
+import { RemoveComponent } from './Components/remove/remove.component';
+import { AboutComponent } from './Components/about/about.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
       },
     ],
   },
+  { path: 'aboutUs', component:AboutComponent},
   { path: '**',  component: ErrorComponent},
 ];
 
