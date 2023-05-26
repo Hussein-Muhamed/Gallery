@@ -24,7 +24,7 @@
     border-radius: 55% 59% 82% 39% / 77% 57% 60% 45%;
     height: 220px;
     width: 220px;
-    top: -60px;
+    top: -80px;
     left: -70px;
     background: radial-gradient(#44006b, #ad1fff);
     overflow: hidden;
@@ -71,19 +71,19 @@
 
 
   .bg-glass {
-    background-color: hsla(0, 0%, 100%, 0.664) !important;
+    background-color: hsla(0, 0%, 100%, 0.779) !important;
     border-radius: 30px;
     backdrop-filter: saturate(200%) blur(25px);
     animation: goLeft 2.5s 1 linear;
   }
 
 
-  img{
+  button img{
     width: 40px;
     height: 40px;
   }
 
-  img:hover {
+  button img:hover {
     animation: dance 1s infinite linear;
 }
 
@@ -113,3 +113,28 @@
     height: 100vh;
   }
  }
+
+ #photo{
+  width: 300px;
+  height: 300px;
+   margin-top: -180px;
+   margin-left: 290px;
+   border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+   animation: fly 7s infinite linear;
+ }
+
+ @keyframes fly {
+  0%{
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  } 
+  50%{
+    border-radius: 60% 70% 80% 90% / 90% 70% 50% 30%;
+  }
+  80%{
+    border-radius: 77% 45% 79% 60% / 98% 84% 46% 42%
+  }
+  100%{
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  }
+ }
+

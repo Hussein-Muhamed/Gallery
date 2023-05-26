@@ -40,6 +40,22 @@ export class WelcomeComponent {
     return this.validation.controls['lname'];
   }
 
+  get phoneNumber() {
+    return this.validation.controls['phoneNumber'];
+  }
+
+  get city() {
+    return this.validation.controls['city'];
+  }
+
+  get street() {
+    return this.validation.controls['street'];
+  }
+
+  get suite() {
+    return this.validation.controls['suite'];
+  }
+
   validation = new FormGroup({
     email: new FormControl(localStorage.getItem('email'), [
       Validators.required,
@@ -68,6 +84,16 @@ export class WelcomeComponent {
       Validators.minLength(3),
       Validators.maxLength(10),
       Validators.pattern('^[a-zA-z]+$'),
+    ]),
+    phoneNumber: new FormControl(null, [
+      Validators.required,
+      Validators.pattern('^01[0-2,5]{1}[0-9]{8}$'),
+    ]),
+    city: new FormControl(null, [Validators.required]),
+    street: new FormControl(null, [Validators.required]),
+    suite: new FormControl(null, [
+      Validators.required,
+      Validators.pattern('^[1-9]*$'),
     ]),
   });
 
@@ -123,7 +149,12 @@ export class WelcomeComponent {
         this.user = this.user[0];
 
         if (!this.user) {
-          if (this.email.valid && this.password.valid && this.fname.valid && this.lname.valid) {
+          if (
+            this.email.valid &&
+            this.password.valid &&
+            this.fname.valid &&
+            this.lname.valid
+          ) {
             let user = {
               name:
                 this.validation.controls['fname'].value +
@@ -132,6 +163,12 @@ export class WelcomeComponent {
               username: this.validation.controls['fname'].value,
               email: this.validation.controls['email'].value,
               password: this.validation.controls['password'].value,
+              phone: this.validation.controls['phoneNumber'].value,
+              address: {
+                city: this.validation.controls['city'].value,
+                street: this.validation.controls['street'].value,
+                suite: this.validation.controls['suite'].value,
+              },
             };
             this.srv.AddUser(user).subscribe();
             console.log('Successfully');

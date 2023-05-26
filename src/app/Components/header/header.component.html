@@ -8,32 +8,32 @@
     
         <div class=" my-3 d-lg-none d-sm-block d-xs-block">
             <div class="input-group">
-            <input type="text" class="form-control " style="color:#7a7a7a">
-            <button class="btn text-white " style="background-color:rgb(148 27 101);">Search</button>
+            <input type="text" class="form-control" [(ngModel)]="email" style="color:#000000">
+            <button   class="btn text-white"  style="background-color:rgb(148 27 101);" (click)="search()">Search</button>
             </div>
         </div>
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
             <div class="ms-auto d-none d-lg-block">
             <div class="input-group">
-                <input type="text" class="form-control " style="color:#7a7a7a; border-color:rgb(136, 89, 178);">
-                <button class="btn text-white" style="background-color:rgb(148 27 101);">Search</button>
+                <input type="text" class="form-control " [(ngModel)]="email" style="color:#7a7a7a; border-color:rgb(136, 89, 178);">
+                <button   class="btn text-white" style="background-color:rgb(148 27 101);" (click)="search()">Search</button>
             </div>
             </div>
             <ul class="navbar-nav ms-auto ">
             <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase "  aria-current="page" href="#">Offers</a>
+                <a class="nav-link mx-2 text-uppercase " aria-current="page" >Offers</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase " href="#">Products</a>
+                <a class="nav-link mx-2 text-uppercase " >Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase" href="#">Catalog</a>
+                <a class="nav-link mx-2 text-uppercase" >Catalog</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase" href="#">Services</a>
+                <a class="nav-link mx-2 text-uppercase" >Services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase" href="#">About</a>
+                <a class="nav-link mx-2 text-uppercase">About</a>
             </li>
             </ul>
             <ul class="navbar-nav ms-auto ">

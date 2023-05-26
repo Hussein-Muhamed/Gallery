@@ -250,6 +250,39 @@
         "suite": 5
       },
       "id": 11
+    },
+    {
+      "name": "sayed msala",
+      "username": "sayed",
+      "email": "sayed@sayed",
+      "password": "123456",
+      "id": 12
+    },
+    {
+      "name": "Ramy Sabry",
+      "username": "Ramy",
+      "email": "RamySabry@yahoo.com",
+      "password": "12345678",
+      "phone": "01055018932",
+      "address": {
+        "city": "Egypt",
+        "street": "El Zamalek",
+        "suite": "13"
+      },
+      "id": 13
+    },
+    {
+      "name": "Mohamed Abotriaka",
+      "username": "Mohamed",
+      "email": "MoahmedAbotriaka@gmail.com",
+      "password": "12345678",
+      "phone": "01009223232",
+      "address": {
+        "city": "Egypt",
+        "street": "El Ismalaia",
+        "suite": "12"
+      },
+      "id": 14
     }
   ],
   "albums": [
