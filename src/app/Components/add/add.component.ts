@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -13,14 +13,16 @@ import { UsersService } from 'src/app/Servecis/users.service';
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.css'],
 })
-export class AddComponent {
+export class AddComponent{
+
   constructor(private router: Router, public UserService: UsersService) {
     this.myValidation.controls['name'].setValue("");
   }
+
   myValidation = new FormGroup({
     name: new FormControl('', [
       Validators.required,
-      Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_]{5,15}$/i),
+      Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_]{2,15}$/i),
     ]),
     email: new FormControl('', [
       Validators.required,
@@ -79,6 +81,14 @@ export class AddComponent {
   }
 
   Add() {
+    let alert:any = document.getElementById('alert')
+    
+    alert.style.display = 'block'
+    
+    setTimeout(() => {
+      alert.style.display = 'none'
+    }, 3000);
+
     if (this.validate()) {
       let address = {
         city: this.City.value,
@@ -99,6 +109,7 @@ export class AddComponent {
       };
 
       this.UserService.AddUser(newUser).subscribe(); // this.router.navigate(['/users']);
+      document.location.reload()
     }
   }
 }

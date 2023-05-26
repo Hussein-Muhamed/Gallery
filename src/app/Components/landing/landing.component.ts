@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
 
 @Component({
@@ -6,8 +7,10 @@ import { UsersService } from 'src/app/Servecis/users.service';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css'],
 })
-export class LandingComponent {
-  constructor(public UserService: UsersService) {}
+export class LandingComponent implements OnInit {
+  id:any
+  constructor(public UserService: UsersService,public route:ActivatedRoute, public router:Router) {}
+  
   Users: any;
 
   ngOnInit(): void {
@@ -20,8 +23,14 @@ export class LandingComponent {
         console.log(err);
       },
     });
+    this.router.navigate(['/landing'])
+
   }
 
-
+  remove(){
+    this.id = this.route.snapshot.firstChild?.params['id'] 
+    this.UserService.DeleteUser(this.id).subscribe()
+    document.location.reload()
+  }
 
 }

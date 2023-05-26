@@ -16,6 +16,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './Components/home/home.component';
+import { RemoveComponent } from './remove/remove.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HomeComponent } from './Components/home/home.component';
     FooterComponent,
     ErrorComponent,
     HomeComponent,
+    RemoveComponent,
   ],
   imports: [
     BrowserModule,

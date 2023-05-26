@@ -1,3 +1,4 @@
+
 img{
     width: 450px;
     height: 450px;
@@ -11,7 +12,6 @@ p{
 #btn{
     border:2px solid #33cccc;
     border-radius: 20px;
-    font-size: 30px;
     scale:0.9;
 }
 
