@@ -19,6 +19,7 @@ export class EditeComponent {
    x :any ;
   ngOnInit(): void {
     console.log("hi here");
+    
     this.UsersService.GetUserByID(this.ID).subscribe({
       next:(data)=>{
         this.User=data;
