@@ -36,7 +36,7 @@
                   <td id="phone">{{u.phone}}</td>
                   <td id="address">{{u.address.suite+" " + u.address.street+" " + u.address.city}}</td>
 
-                  <td  routerLink="/landing/edite/{{u.id}}"><img src="assets/icos/edit.png" style="width: 35px;height: 37px;; cursor:pointer"></td>
+                  <td  routerLink="/landing/edite/{{u.id}}" data-bs-target="#editModal" data-bs-toggle="modal" ><img src="assets/icos/edit.png" style="width: 35px;height: 37px;; cursor:pointer"></td>
 
                   <td data-bs-target="#deleteModal" data-bs-toggle="modal" ><img src="assets/icos/trash.png" style="width: 35px;height: 37px; cursor:pointer"></td>
 
@@ -72,7 +72,7 @@
 
 <app-add ></app-add>
 
-
+<router-outlet ></router-outlet>
 
 
 
