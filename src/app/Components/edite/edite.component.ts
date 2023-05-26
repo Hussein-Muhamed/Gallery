@@ -2,20 +2,25 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
-
 @Component({
   selector: 'app-edite',
   templateUrl: './edite.component.html',
   styleUrls: ['./edite.component.css']
 })
+
 export class EditeComponent {
   ID:any;
   User:any;
+  
   constructor(private router: Router,myRoute:ActivatedRoute,public UsersService:UsersService){
      this.ID = myRoute.snapshot.params["id"];
+     console.log(this.ID);
   }
   ngOnInit(): void {
-    console.log("hi here");
+    let x :any =  document.getElementById('editModal');
+    x.addEventListener("close" , ()=>{ 
+     this.router.navigate(["/landing"]);
+    });
     this.UsersService.GetUserByID(this.ID).subscribe({
       next:(data)=>{
         this.User=data;
@@ -94,6 +99,6 @@ export class EditeComponent {
       this.UsersService.UpdateUser(this.ID,newUser).subscribe();
       // this.router.navigate(['/students']);
     }
-
+  
   }
 }

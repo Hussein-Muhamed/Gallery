@@ -29,9 +29,9 @@
               </tr>
           </thead>
           <tbody>
-              <tr *ngFor="let u of Users" class="text-center fs-5" style="font-weight: light;" >
-                  <td id="id">{{u.id}}</td>
-                  <td id="name">{{u.name}}</td>
+              <tr  *ngFor="let u of Users" class="text-center fs-5" style="font-weight: light;" >
+                  <td routerLink="/Profile/Album/{{u.id}}" id="id">{{u.id}}</td>
+                  <td routerLink="/Profile/Album/{{u.id}}" id="name">{{u.name}}</td>
                   <td id="email">{{u.email}}</td>
                   <td id="phone">{{u.phone}}</td>
                   <td id="address">{{u.address.suite+" " + u.address.street+" " + u.address.city}}</td>
@@ -71,6 +71,7 @@
 </div>
 
 <app-add ></app-add>
+<router-outlet style="z-index: 1; "></router-outlet>
 
 
 
