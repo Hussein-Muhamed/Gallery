@@ -28,8 +28,7 @@ a {
   
     a:hover,a:focus {
         scale: 1.2;
-        color: rgb(148 27 101);
-        text-shadow: 1px 1px 30px rgb(227, 146, 191);
+        color: #00ADB5;
         opacity:1;
     }
 }
@@ -37,19 +36,18 @@ a {
   
     a:hover {
         scale: 1;
-        color: rgb(148 27 101);
+        color: #00ADB5;
         text-shadow: 1px 1px 30px rgb(227, 146, 191);
         ;
     }
 }
 .Active {
-    color: rgb(148 27 101);
+    color: #00ADB5;
 }
 
 a:focus {
-    color: rgb(148 27 101);
-    text-shadow: 1px 1px 30px rgb(236, 155, 205);
-    ;
+    color: #00ADB5;
+
 }
 
 

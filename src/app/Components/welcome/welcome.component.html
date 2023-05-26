@@ -181,7 +181,7 @@
                 <button  type="submit" (click)="validate()" class="btn btn-outline-primary w-100 m-auto btn-block mb-4">
                   Login in
                 </button>
-                <a  (click)="showReset()" style="font-size:14px;text-decoration: underline;color:rgb(0, 7, 203);cursor: pointer;">Forget Your password</a><br><br>
+                <a  (click)="showReset()" style="font-size:14px;text-decoration: underline;color:rgb(71, 1, 92);cursor: pointer;">Forget Your password</a><br><br>
                 <span class="mb-3">You Don't have Account  </span><a  (click)="signup()" style="font-size:14px;text-decoration: underline;color:rgb(71, 1, 92);cursor: pointer;">Sign up</a>
                 
                 
@@ -235,6 +235,8 @@
                 <button type="submit" class="btn btn-outline-primary w-100 m-auto btn-block mb-4" (click)="resetPassword()">
                   Reset Password
                 </button>
+
+                <span class="mb-3" (click)="goBack()" style="cursor: pointer;color:rgb(71, 1, 92)">Go Back</span>
               </form>
             </div>
           </div>
@@ -243,5 +245,5 @@
 
       </div>
     </div>
-    <img id="photo" src="assets/images/2.jpg" >
+    <img *ngIf=flag id="photo" src="assets/images/2.jpg" >
 </section>

@@ -37,4 +37,14 @@ export class HeaderComponent {
       },
     });
   }
+
+  navigate() {
+    //! if admin -> landing
+    //! if user -> Home
+  }
+
+  logo(){
+    //! if admin -> landing
+    //! if user -> Home
+  }
 }

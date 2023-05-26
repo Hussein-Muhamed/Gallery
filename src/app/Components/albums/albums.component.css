@@ -1,0 +1,9 @@
+#count{
+    margin-top: 80px;
+}
+
+@media (max-width:768px) {
+    #cont{
+      margin-top: 210px;
+    }
+}

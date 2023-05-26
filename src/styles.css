@@ -21,9 +21,18 @@
     src:url('src/assets/fonts/Amatic_SC/AmaticSC-Bold.ttf')
 }
 
+@font-face {
+    font-family: About;
+    src: url('src/assets/fonts/Lobster/Lobster-Regular.ttf');
+}
+
+@font-face {
+    font-family: Title;
+    src: url('src/assets/fonts/Fjalla_One/FjallaOne-Regular.ttf');
+}
 
 #cont{
-    margin-top:110px;
+    margin-top:80px;
     min-height: 480px;
   }
   
@@ -33,6 +42,20 @@
       min-height: 100px;
     }
 }
+
 .Btangany{
     background-color: rgb(148 27 101);
+}
+
+.Dark{
+    background-color: #222831;
+}
+.Grey{
+    background-color: #393E46;
+}
+.MentGreen{
+    background-color: #00ADB5;
+}
+.GreyLight{
+    background-color: #EEEEEE;
 }

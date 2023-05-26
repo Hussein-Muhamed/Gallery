@@ -2,10 +2,10 @@
 <main id="cont" role="main">
   <div class="album py-5 "  >
     <div class="container d-flex justify-content-center align-items-center">
-      <div class="row col-12 col-lg-9  ">
+      <div class="row col-12 col-lg-12  ">
         <div *ngFor="let album of Albums" class="col-md-4 col-sm-6"  >
           <div (click)="navigate(album.id)" *ngIf="Photos" routerLink="/Profile/Album/1" class="card mb-4 box-shadow  " style="height:90%;"   >
-            <img class="card-img-top" src="assets/images/MicrosoftTeams-image.png" alt="Card image cap">
+            <img class="card-img-top" src="assets/images/bg.jpg" alt="Card image cap">
             <div class="card-body text-center">
               <h4>{{album.title}}</h4>
               <h5 >{{getphotos(album.id)}}</h5>

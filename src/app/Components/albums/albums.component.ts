@@ -15,9 +15,10 @@ export class AlbumsComponent implements OnInit {
   constructor(
     private srv: AlbumsService,
     private photoSrv: PhotosService,
-    private ActiveRoote: ActivatedRoute ,private router:Router
+    private ActiveRoute: ActivatedRoute ,private router:Router
   ) {
-    this.UserId =  this.ActiveRoote.snapshot.params['id'] ; 
+    this.UserId =  this.ActiveRoute.snapshot.params['id'] ;
+    
   }
   ngOnInit(): void {
     this.srv.GetLbumssByUserId(this.UserId).subscribe({
@@ -38,6 +39,10 @@ export class AlbumsComponent implements OnInit {
         console.log(err);
       },
     });
+
+    let img:any = document.getElementById('img')
+    console.log(img);
+    img.scr = 'assets/images/MicrosoftTeams-image.png'
   }
   getphotos(albumId: any) {
     return Object.values(this.Photos).filter((x: any) => x.albumId == albumId).length;
@@ -45,5 +50,12 @@ export class AlbumsComponent implements OnInit {
   navigate(albumId:any)
   {
     this.router.navigate([`/Profile/Photos/${albumId}`])
+  }
+
+  click(){
+    let img:any = document.getElementById('img')
+    console.log(img);
+    img.scr = 'assets/images/MicrosoftTeams-image.png' 
+
   }
 }

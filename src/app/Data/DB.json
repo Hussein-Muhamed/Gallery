@@ -7,34 +7,21 @@
   ],
   "users": [
     {
-      "id": 1,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
-      "password": 12345678,
+      "name": "Hussein",
+      "email": "huss@iti.com",
+      "phone": "01040190394",
       "address": {
-        "street": "Kulas Light",
-        "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874",
-        "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
-        }
+        "city": "KSA 🕋",
+        "street": "El Riad",
+        "suite": 2
       },
-      "phone": "1-770-736-8031 x56442",
-      "website": "hildegard.org",
-      "company": {
-        "name": "Romaguera-Crona",
-        "catchPhrase": "Multi-layered client-server neural-net",
-        "bs": "harness real-time e-markets"
-      }
+      "id": 1
     },
     {
       "id": 3,
       "name": "Clementine Bauch",
       "username": "Samantha",
-      "email": "Nathan@yesenia.net",
+      "email": "hamada@iti.com",
       "password": 12345678,
       "address": {
         "street": "Douglas Extension",
@@ -256,6 +243,19 @@
       },
       "password": "123456",
       "id": 13
+    },
+    {
+      "name": "Hussein Mohamed",
+      "username": "Hussein",
+      "email": "hussein@iti.com",
+      "password": "12345678",
+      "phone": "01023232323",
+      "address": {
+        "city": "Egypt",
+        "street": "El Zamalek",
+        "suite": "13"
+      },
+      "id": 14
     }
   ],
   "albums": [

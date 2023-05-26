@@ -1,0 +1,106 @@
+
+#row{
+    gap:100px;
+    margin:50px 0 80px 0
+}
+
+#head{
+    font-family: 'About';
+    font-size: 100px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#title{
+    font-family: 'About';
+    color:gray;
+    font-size: 30px;
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+#name{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Title';
+    text-align: center;
+    
+}
+
+#position,#phone{
+    font-size: 20px;
+    color:#3b3b3b;
+    font-family: 'Title';
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#hussContainer,#asmaaContainer,#ayaContainer{
+    background-color: rgb(94 94 94 / 55%);
+    border-radius: 39% 60% 42% 42% / 70% 48% 50% 30%;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    overflow: hidden;
+
+}
+
+#hussein img,#aya img,{
+    width: 250px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+/* #asmaa img{
+    margin-left: -20px;
+} */
+
+#aya img{
+    /* width: 200px;
+    height: 300px */
+}
+
+#hussContainer{
+    background-color: #750f2fc9;
+}
+
+#asmaaContainer{
+    background-color: rgb(15 41 192 / 60%)
+}
+
+#ayaContainer{
+    background-color: rgba(255, 133, 2, 0.6);
+}
+
+#hussContainer:hover{
+    scale:1.2;
+    background-color: #993353;
+
+}
+
+#asmaaContainer:hover{
+    scale:1.2;
+    background-color: rgb(15 41 192 / 84%);
+    
+}
+
+#ayaContainer:hover{
+    scale:1.2;
+    background-color: rgb(254 139 14 / 81%);
+    
+}
+
+#icon{
+    width: 50px !important;
+    height: 50px !important;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+#icon:hover{
+    opacity: 1;
+    scale: 1.1;
+    cursor: pointer;
+}
+

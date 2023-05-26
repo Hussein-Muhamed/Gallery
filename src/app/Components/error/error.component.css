@@ -1,0 +1,42 @@
+
+img{
+    width: 450px;
+    height: 450px;
+}
+
+p{
+    font-size: 45px;
+    font-weight: bold
+}
+
+#btn{
+    border:2px solid #33cccc;
+    border-radius: 20px;
+    scale:0.9;
+}
+
+#btn:hover{
+    background-color: #33cccc;
+    color:white;
+    animation: hover 0.5s infinite linear;
+    scale:1.1
+}
+
+@keyframes hover {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(2deg);
+    }
+    80%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+*{
+    font-family: 'Error';
+}

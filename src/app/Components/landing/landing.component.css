@@ -57,7 +57,7 @@ tbody tr:hover{
 
 @media (max-width:768px) {
   #cont{
-    margin-top: 220px;
+    margin-top: 130px;
   }
   #id,#phone{
     display:none
@@ -165,4 +165,10 @@ tbody tr:hover{
 .trigger-btn {
   display: inline-block;
   margin: 100px auto;
+}
+
+#btnAdd:hover{
+  background-color: #00ADB5;
+  border:1px solid rgba(0, 0, 0, 0);
+  color:white;
 }

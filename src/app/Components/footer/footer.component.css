@@ -6,7 +6,7 @@
 }
 
 footer{
-    background-color: rgb(238, 238, 238);
+    background-color: #EEEEEE;
 }
 
 #social img {
@@ -47,21 +47,21 @@ footer{
 
 #h1,#h2,#h3,#h4{
     font-size: 30px;
-    color:rgb(148 27 101);
+    color:#00ADB5;
 }
 
 p:hover,p:focus {
-    color:rgb(148 27 101);
+    color:#00ADB5;
 }
 
 #btn{
     background-color: #d7d7d77b;
     border:1px solid rgba(0, 0, 0, 0.103) !important;
-    color:rgb(148 27 101);
+    color:#00ADB5;
 }
 
 #btn:hover{
-    background-color:rgb(148 27 101) ;
+    background-color:#393E46 ;
     color:white
 }
 

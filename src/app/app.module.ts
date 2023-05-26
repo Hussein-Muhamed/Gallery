@@ -14,7 +14,7 @@ import { EditeComponent } from './Components/edite/edite.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './Components/footer/footer.component';
-import { ErrorComponent } from './error/error.component';
+import { ErrorComponent } from './Components/error/error.component';
 import { HomeComponent } from './Components/home/home.component';
 import { RemoveComponent } from './Components/remove/remove.component';
 import { AboutComponent } from './Components/about/about.component';

@@ -101,6 +101,11 @@ export class WelcomeComponent {
     this.flag = true;
   }
 
+  goBack(){
+    this.flag = true;
+    this.reset = true;
+  }
+
   signup() {
     this.flag = false;
   }
