@@ -1,7 +1,7 @@
 
 <section class="background-radial-gradient overflow-hidden">
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-      <div class="row gx-lg-5 justify-content-center">
+      <div class="row  justify-content-center">
         <div *ngIf=flag class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
           <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
             Gallery  <br />
@@ -9,7 +9,7 @@
           </h1>
           <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
             Gallery websites serve as an important resource for art lovers, collectors, and enthusiasts, providing a convenient way to discover and appreciate different forms of art from around the world.
-            Best Website For Gallery to Share Your Memories with Your Friends let's start now  🔥🤸🏻‍♂️
+            Best Website For Gallery to Share Your Memories with Your Friends let's start now 
           </p>
         </div>
   
@@ -18,11 +18,11 @@
           <div id="radius-shape-2" class="position-absolute  shadow-5-strong"></div>
   
           <!-- signup -->
-          <div *ngIf=!flag  class="card bg-glass">
-            <div class="card-body px-4 py-5 px-md-5">
+          <div *ngIf=!flag  class="card bg-glass" style="margin-top:-30px">
+            <div class="card-body px-4 py-5 px-md-5" >
               <form [formGroup]="validation">
                 <div class="row">
-                  <div class="col-md-6  mb-1">
+                  <div class="col-md-6  mb-3">
                     <div class="form-floating">
                       <input formControlName="fname" [ngStyle]="{'border-color':(fname.valid?'green':(fname&&fname.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)"  id="input" type="text" class="form-control" id="floatingInput" placeholder="Name">
                       <label for="floatingInput">First Name</label>
@@ -61,7 +61,46 @@
                   <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid Password!</p>
                 </p>
 
-                
+                <!-- phone number -->
+                <div class="form-floating mb-3">
+                  <input formControlName="phoneNumber" [ngStyle]="{'border-color':(phoneNumber.valid?'green':(phoneNumber&&phoneNumber.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)" id="input" type="text" class="form-control" id="floatingInput" placeholder="Name">
+                  <label for="floatingInput">Phone Number</label>
+                </div>
+                <div *ngIf="phoneNumber.value && phoneNumber.invalid">
+                  <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid Phone Number!</p>
+                </div>
+
+                <div class="row">
+                  <div class="col-4">
+                    <div class="form-floating mb-3">
+                      <input formControlName="city" [ngStyle]="{'border-color':(city.valid?'green':(city&&city.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)" id="input" type="text" class="form-control" id="floatingInput" placeholder="Name">
+                      <label for="floatingInput">City</label>
+                    </div>
+                    <div *ngIf="city.value && city.invalid">
+                      <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">This Field is Required!</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating mb-3">
+                      <input formControlName="street" [ngStyle]="{'border-color':(street.valid?'green':(street&&street.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)" id="input" type="text" class="form-control" id="floatingInput" placeholder="Name">
+                      <label for="floatingInput">Street</label>
+                    </div>
+                    <div *ngIf="street.value && street.invalid">
+                      <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">This Field is Required!</p>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-floating mb-3">
+                      <input formControlName="suite" [ngStyle]="{'border-color':(suite.valid?'green':(suite&&suite.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)" id="input" type="text" class="form-control" id="floatingInput" placeholder="Name">
+                      <label for="floatingInput">Suite Number</label>
+                    </div>
+                    <div *ngIf="suite.value && suite.invalid">
+                      <p style="color:red;display: inline-block;padding-left: 5px;">Enter Valid Data !</p>
+                    </div>
+                  </div>
+                </div>
+
+
                 <div *ngIf="!credentials">
                   <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">This Email Already Exists !</p>
                 </div>
@@ -204,5 +243,5 @@
 
       </div>
     </div>
+    <img id="photo" src="assets/images/2.jpg" >
 </section>
-
