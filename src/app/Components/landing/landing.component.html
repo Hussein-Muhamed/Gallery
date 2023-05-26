@@ -12,7 +12,7 @@
   </div>
 </div>
 <div id="cont" class="container " >
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center " >
     <div class="col-12">
       <div class=" user-dashboard-info-box table-responsive mt-md-4  mt-sm-3 p-4 bg-white shadow-sm">
 
@@ -29,9 +29,9 @@
               </tr>
           </thead>
           <tbody>
-              <tr *ngFor="let u of Users" class="text-center fs-5" style="font-weight: light;" >
-                  <td id="id">{{u.id}}</td>
-                  <td id="name">{{u.name}}</td>
+              <tr  *ngFor="let u of Users" class="text-center fs-5" style="font-weight: light;" >
+                  <td routerLink="/Profile/Album/{{u.id}}" id="id">{{u.id}}</td>
+                  <td routerLink="/Profile/Album/{{u.id}}" id="name">{{u.name}}</td>
                   <td id="email">{{u.email}}</td>
                   <td id="phone">{{u.phone}}</td>
                   <td id="address">{{u.address.suite+" " + u.address.street+" " + u.address.city}}</td>
@@ -49,10 +49,9 @@
 </div>
 
 
-<app-add ></app-add>
-<router-outlet></router-outlet>
+<app-add (myevent)="addnewUser($event)" ></app-add>
+<router-outlet (deactivate)="EditUser($event)"></router-outlet>
 
-<router-outlet ></router-outlet>
 
 
 

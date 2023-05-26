@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade rounded-5" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top: 100px;">
+<div #myname class="modal fade rounded-5" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="margin-top: 100px;">
   <div class="registration-form modal-dialog">
     <form [formGroup]="myValidation" class="modal-content">
       <a data-bs-dismiss="modal"> <img src="assets/icos/remove.png"
@@ -61,7 +61,7 @@
 
 </div>
 
-<div class="rounded-5 mt-5 pt-5" id="alert" style="display:none">
+<div class="rounded-5 mt-5 pt-5 " id="alert" style="display:none; position: fixed;">
   <div class="alert alert-success mt-5">
     <h3>User Added Successfully ✔</h3>
   </div>

@@ -1,6 +1,6 @@
 
 <main id="cont" role="main">
-  <div class="album py-5 ">
+  <div class="album py-5 "  >
     <div class="container d-flex justify-content-center align-items-center">
       <div class="row col-12 col-lg-9  ">
         <div *ngFor="let album of Albums" class="col-md-4 col-sm-6"  >
@@ -17,3 +17,5 @@
     </div>
   </div>
 </main>
+
+<div *ngIf="!Albums || Albums.length==0" class="alert alert-denger " > No ALbums </div>

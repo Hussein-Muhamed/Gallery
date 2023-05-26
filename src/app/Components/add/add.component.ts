@@ -1,4 +1,12 @@
-import { Component} from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -13,12 +21,22 @@ import { UsersService } from 'src/app/Servecis/users.service';
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.css'],
 })
-export class AddComponent{
+export class AddComponent implements OnInit {
+  @Output() myevent = new EventEmitter();
+
+  @ViewChild('myname')
+  public addModelElem!: ElementRef;
+
 
   constructor(private router: Router, public UserService: UsersService) {
-    this.myValidation.controls['name'].setValue("");
+    this.myValidation.controls['name'].setValue('');
   }
-
+  ngOnInit(): void {}
+  ngAfterViewInit() {
+    this.addModelElem.nativeElement.addEventListener('hidden.bs.modal', () => {
+      this.myValidation.reset();
+    });
+  }
   myValidation = new FormGroup({
     name: new FormControl('', [
       Validators.required,
@@ -26,7 +44,9 @@ export class AddComponent{
     ]),
     email: new FormControl('', [
       Validators.required,
-      Validators.pattern(/^([a-zA-Z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/),
+      Validators.pattern(
+        /^([a-zA-Z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+      ),
     ]),
     phone: new FormControl('', [
       Validators.required,
@@ -81,12 +101,12 @@ export class AddComponent{
   }
 
   Add() {
-    let alert:any = document.getElementById('alert')
-    
-    alert.style.display = 'block'
-    
+    let alert: any = document.getElementById('alert');
+
+    alert.style.display = 'block';
+
     setTimeout(() => {
-      alert.style.display = 'none'
+      alert.style.display = 'none';
     }, 3000);
 
     if (this.validate()) {
@@ -106,10 +126,11 @@ export class AddComponent{
         phone: this.Phone.value,
 
         address,
+        password:"123456"
       };
-
-      this.UserService.AddUser(newUser).subscribe(); // this.router.navigate(['/users']);
-      document.location.reload()
+      this.UserService.AddUser(newUser).subscribe({next:()=>{  this.myevent.emit(newUser);}}); // this.router.navigate(['/users']);
+    
+      this.myValidation.reset();
     }
   }
 }

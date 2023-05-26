@@ -3,6 +3,7 @@
 
 <div  class=" modal rounded-5" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
+  
   <div class="registration-form modal-dialog">
     <form [formGroup]="myValidation" class="modal-content">
       <!-- <img src="assets/icos/remove.png" style="width: 30px;height: 30px;position: absolute;right: 30px;top:30px;cursor: pointer;" alt=""> -->
@@ -13,19 +14,19 @@
       <div class="form-group">
         <input type="text" class="form-control item"  placeholder="John Doe" formControlName="name">
       </div>
-      <div *ngIf=" Name.invalid && (Name.dirty)">
+      <div *ngIf=" Name.invalid && (Name)">
        <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid Name!</p>
        </div>
       <div class="form-group">
         <input type="email" class="form-control item"  placeholder="john@gmail.com" formControlName="email">
       </div>
-      <div *ngIf="Email.invalid && (Email.dirty)">
+      <div *ngIf="Email.invalid && (Email)">
         <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid Email!</p>
         </div>
       <div class="form-group">
         <input type="text" class="form-control item"  placeholder="011-2345-6789" formControlName="phone">
       </div>
-      <div *ngIf="Phone.invalid && (Phone.dirty)">
+      <div *ngIf="Phone.invalid && (Phone)">
         <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid Phone Number!</p>
       </div>
       <div class="form-group">
@@ -46,11 +47,11 @@
       <div *ngIf="Address">
         <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">failed required</p>
       </div>
-      <div *ngIf="Street_Num.invalid && (Street_Num.dirty)">
+      <div *ngIf="Street_Num.invalid && (Street_Num)">
         <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid Street Number</p>
       </div>
       <div class="form-group text-center">
-        <button type="submit" class="btn btn-block create-account" data-bs-toggle="modal" (click)="Update()" >Edit User</button>
+        <button type="submit" class="btn btn-block create-account" (click)="Update()" data-bs-toggle="modal"  >Edit User</button>
       </div>
     </form>
 

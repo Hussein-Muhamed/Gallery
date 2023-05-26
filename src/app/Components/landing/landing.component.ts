@@ -1,6 +1,8 @@
 import { Component,OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
+import { EditeComponent } from '../edite/edite.component';
+import { RemoveComponent } from '../remove/remove.component';
 
 @Component({
   selector: 'app-landing',
@@ -14,6 +16,7 @@ export class LandingComponent implements OnInit {
   Users: any;
 
   ngOnInit(): void {
+    
     this.UserService.GetAllUsers().subscribe({
       next: (data) => {
         this.Users = data;
@@ -26,11 +29,25 @@ export class LandingComponent implements OnInit {
     this.router.navigate(['/landing'])
 
   }
-
   remove(){
     this.id = this.route.snapshot.firstChild?.params['id'] 
     this.UserService.DeleteUser(this.id).subscribe()
     document.location.reload()
+  }
+  addnewUser(eve:any)
+  {
+  this.router.navigate(['/landing'])
+  this.ngOnInit();
+  console.log(this.Users);
+  }
+  EditUser(eve:any)
+  {
+    if( eve instanceof EditeComponent || eve instanceof RemoveComponent )
+    {
+    this.router.navigate(['/landing'])
+    this.ngOnInit();
+    console.log(this.Users);
+    }
   }
 
 }

@@ -29,7 +29,8 @@
   
 @media (max-width:768px) {
     #cont{
-      margin-top: 220px;
+      margin-top: 120px;
+      min-height: 100px;
     }
 }
 .Btangany{
