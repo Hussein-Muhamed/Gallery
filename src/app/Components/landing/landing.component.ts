@@ -16,6 +16,7 @@ export class LandingComponent implements OnInit {
   Users: any;
 
   ngOnInit(): void {
+    
     this.UserService.GetAllUsers().subscribe({
       next: (data) => {
         this.Users = data;

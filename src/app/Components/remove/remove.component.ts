@@ -13,8 +13,7 @@ constructor(public userService:UsersService, public route:ActivatedRoute, public
 }
 remove(){
   this.id = this.route.snapshot.params['id']
-  this.userService.DeleteUser(this.id).subscribe()
-  // document.location.reload()
-  this.router.navigate(['/landing']);
+  this.userService.DeleteUser(this.id).subscribe({next:()=>{  this.router.navigate(['/landing']);}})
+
 }
 }

@@ -128,8 +128,8 @@ export class AddComponent implements OnInit {
         address,
         password:"123456"
       };
-      this.UserService.AddUser(newUser).subscribe(); // this.router.navigate(['/users']);
-      this.myevent.emit(newUser);
+      this.UserService.AddUser(newUser).subscribe({next:()=>{  this.myevent.emit(newUser);}}); // this.router.navigate(['/users']);
+    
       this.myValidation.reset();
     }
   }
