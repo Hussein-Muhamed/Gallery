@@ -3,13 +3,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
 
-
 @Component({
   selector: 'app-edite',
   templateUrl: './edite.component.html',
   styleUrls: ['./edite.component.css']
 })
-
 
 export class EditeComponent {
   ID:any;
@@ -21,11 +19,7 @@ export class EditeComponent {
   }
    x :any ;
   ngOnInit(): void {
-   this.x = document.getElementById('editModal');
-   this.x.addEventListener("hidden.bs.modal" , ()=>{
-  this.router.navigate(["/landing"]);
-   this.x.modal.show();
-     });
+    console.log("hi here");
     this.UsersService.GetUserByID(this.ID).subscribe({
       next:(data)=>{
         this.User=data;
@@ -82,7 +76,13 @@ export class EditeComponent {
   }
 
   Update() {
-
+    console.log("heloooooo" , this.ID);
+    console.log( this.Name.valid ,
+      this.Email.valid ,
+      this.Phone.valid ,
+      this.City.valid ,
+      this.Street.valid ,
+      this.Street_Num.valid);
     if (
       this.Name.valid &&
       this.Email.valid &&
@@ -104,9 +104,9 @@ export class EditeComponent {
       };
 
       this.UsersService.UpdateUser(this.ID,newUser).subscribe();
-
       this.router.navigate(['/landing']);
-         this.x.dispatchEvent("data.bs.dismiss")
+     
+         console.log("ddddddddddddddddddddddddddddddddddddddddd" , this.ID);
     }
   
   }
