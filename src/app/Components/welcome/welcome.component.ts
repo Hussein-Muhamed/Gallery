@@ -89,8 +89,8 @@ export class WelcomeComponent {
       Validators.required,
       Validators.pattern('^01[0-2,5]{1}[0-9]{8}$'),
     ]),
-    city: new FormControl(null, [Validators.required]),
-    street: new FormControl(null, [Validators.required]),
+    city: new FormControl(null, [Validators.required, Validators.pattern('^[a-zA-Z]+$')]),
+    street: new FormControl(null, [Validators.required, Validators.pattern('^[a-zA-Z]+$')]),
     suite: new FormControl(null, [
       Validators.required,
       Validators.pattern('^[1-9]*$'),
@@ -229,5 +229,14 @@ export class WelcomeComponent {
         console.log(err);
       },
     });
+  }
+
+  showPassword(){
+    let password:any = document.getElementById('floatingPassword') 
+    if(password.type == 'password'){
+      password.type = 'text'
+    } else {
+      password.type = 'password'
+    }
   }
 }

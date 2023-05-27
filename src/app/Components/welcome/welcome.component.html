@@ -157,9 +157,10 @@
 
   
                 <!-- Password input -->
-                <div class="form-floating mb-4">
+                <div class="form-floating mb-4" style="text-align: end;">
                   <input (input)="clearAlert()" formControlName="password" [ngStyle]="{'border-color':(password.valid?'green':(password&&password.value != null)?'red':'rgba(0, 0, 0, 0)')}" style="border:2px solid rgba(0, 0, 0, 0)" id="input" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                  <label for="floatingPassword">Password</label>
+                  <label for="floatingPassword" >Password</label>
+                  <img src="assets/icos/hidden.png" id="hidden" (click)="showPassword()" style="">
                 </div>
                 <div *ngIf="password.value && password.invalid">
                    <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid password!</p>

@@ -1,3 +1,7 @@
+*{
+  font-family: 'Welcome';
+}
+
 #count{
     margin-top: 80px;
 }

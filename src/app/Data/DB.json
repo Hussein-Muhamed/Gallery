@@ -8,7 +8,8 @@
   "users": [
     {
       "name": "Hussein",
-      "email": "huss@iti.com",
+      "email": "hussein@iti.com",
+      "password": "hussein1234",
       "phone": "01040190394",
       "address": {
         "city": "KSA 🕋",
@@ -18,100 +19,48 @@
       "id": 1
     },
     {
-      "id": 3,
-      "name": "Clementine Bauch",
-      "username": "Samantha",
+      "name": "Hamada",
       "email": "hamada@iti.com",
-      "password": 12345678,
+      "phone": "01023232334",
       "address": {
-        "street": "Douglas Extension",
-        "suite": "Suite 847",
-        "city": "McKenziehaven",
-        "zipcode": "59590-4157",
-        "geo": {
-          "lat": "-68.6102",
-          "lng": "-47.0653"
-        }
+        "city": "USA 🗽",
+        "street": "Douglas ",
+        "suite": 3
       },
-      "phone": "1-463-123-4447",
-      "website": "ramiro.info",
-      "company": {
-        "name": "Romaguera-Jacobson",
-        "catchPhrase": "Face to face bifurcated interface",
-        "bs": "e-enable strategic applications"
-      }
+      "id": 3
     },
     {
-      "id": 4,
-      "name": "Patricia Lebsack",
-      "username": "Karianne",
-      "email": "Julianne.OConner@kory.org",
-      "password": 12345678,
+      "name": "Asmaa Sabry",
+      "email": "smsma@iti.com",
+      "phone": "01232323234",
       "address": {
+        "city": "KSA 🕋",
         "street": "Hoeger Mall",
-        "suite": "Apt. 692",
-        "city": "South Elvis",
-        "zipcode": "53919-4257",
-        "geo": {
-          "lat": "29.4572",
-          "lng": "-164.2990"
-        }
+        "suite": 15
       },
-      "phone": "493-170-9623 x156",
-      "website": "kale.biz",
-      "company": {
-        "name": "Robel-Corkery",
-        "catchPhrase": "Multi-tiered zero tolerance productivity",
-        "bs": "transition cutting-edge web services"
-      }
+      "id": 4
     },
     {
-      "id": 5,
-      "name": "Chelsey Dietrich",
-      "username": "Kamren",
-      "email": "Lucio_Hettinger@annie.ca",
-      "password": 12345678,
+      "name": "Aya Zain",
+      "email": "Aya@iti.com",
+      "phone": "01334342343",
       "address": {
+        "city": "KSA 🕋",
         "street": "Skiles Walks",
-        "suite": "Suite 351",
-        "city": "Roscoeview",
-        "zipcode": "33263",
-        "geo": {
-          "lat": "-31.8129",
-          "lng": "62.5342"
-        }
+        "suite": 32
       },
-      "phone": "(254)954-1289",
-      "website": "demarco.info",
-      "company": {
-        "name": "Keebler LLC",
-        "catchPhrase": "User-centric fault-tolerant solution",
-        "bs": "revolutionize end-to-end systems"
-      }
+      "id": 5
     },
     {
-      "id": 6,
-      "name": "Mrs. Dennis Schulist",
-      "username": "Leopoldo_Corkery",
-      "email": "Karley_Dach@jasper.info",
-      "password": 12345678,
+      "name": "Tamer Hosny",
+      "email": "Tamora@yahoo.com",
+      "phone": "01023232233",
       "address": {
-        "street": "Norberto Crossing",
-        "suite": "Apt. 950",
-        "city": "South Christy",
-        "zipcode": "23505-1337",
-        "geo": {
-          "lat": "-71.4197",
-          "lng": "71.7478"
-        }
+        "city": "USA 🗽",
+        "street": "Crossing",
+        "suite": 3
       },
-      "phone": "1-477-935-8478 x6430",
-      "website": "ola.org",
-      "company": {
-        "name": "Considine-Lockman",
-        "catchPhrase": "Synchronised bottom-line interface",
-        "bs": "e-enable innovative applications"
-      }
+      "id": 6
     },
     {
       "id": 7,
@@ -221,29 +170,16 @@
       "id": 11
     },
     {
-      "name": "Hussein Mohamed",
-      "username": "Hussein",
-      "email": "hussein@iti.com",
-      "password": "12345678",
-      "phone": "01023232323",
+      "name": "zo2la ",
+      "email": "rob3@yahoo.com",
+      "phone": "01542232327",
       "address": {
-        "city": "Egypt",
-        "street": "El Zamalek",
-        "suite": "13"
-      },
-      "id": 14
-    },
-    {
-      "name": "Hussein Mohamed Hussein",
-      "email": "soka@gmail.com",
-      "phone": "01002323233",
-      "address": {
-        "city": "KSA 🕋",
-        "street": "El Doha",
-        "suite": 5
+        "city": "USA 🗽",
+        "street": "New York",
+        "suite": 2
       },
       "password": "123456",
-      "id": 15
+      "id": 12
     }
   ],
   "albums": [
@@ -295,22 +231,22 @@
     {
       "userId": 1,
       "id": 10,
-      "title": "distinctio laborum qui"
+      "title": "Family"
     },
     {
       "userId": 3,
       "id": 21,
-      "title": "repudiandae voluptatem optio est consequatur rem in temporibus et"
+      "title": "Best Memory 🤩"
     },
     {
       "userId": 3,
       "id": 22,
-      "title": "et rem non provident vel ut"
+      "title": "Friends 👩🏻‍🤝‍🧑🏾"
     },
     {
       "userId": 3,
       "id": 23,
-      "title": "incidunt quisquam hic adipisci sequi"
+      "title": "My Birthday 🎂"
     },
     {
       "userId": 3,
