@@ -21,6 +21,7 @@
     {
       "name": "Hamada",
       "email": "hamada@iti.com",
+      "password":"12345678",
       "phone": "01023232334",
       "address": {
         "city": "USA 🗽",
@@ -32,6 +33,7 @@
     {
       "name": "Asmaa Sabry",
       "email": "smsma@iti.com",
+      "password":"12345678",
       "phone": "01232323234",
       "address": {
         "city": "KSA 🕋",
@@ -43,6 +45,7 @@
     {
       "name": "Aya Zain",
       "email": "Aya@iti.com",
+      "password":"12345678",
       "phone": "01334342343",
       "address": {
         "city": "KSA 🕋",
