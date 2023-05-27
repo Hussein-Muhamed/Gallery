@@ -117,8 +117,8 @@
  #photo{
   width: 300px;
   height: 300px;
-   margin-top: -180px;
-   margin-left: 290px;
+   margin-top: -80px;
+   margin-left: 100px;
    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
    animation: fly 7s infinite linear;
  }
@@ -138,3 +138,20 @@
   }
  }
 
+ @media (max-width:1200px){
+  #photo{
+    width: 270px;
+    height: 270px;
+    margin-top: -30px;
+    margin-left: 20px;
+  }
+ }
+
+ @media (max-width:992px){
+  #photo{
+    width: 450px;
+    height: 450px;
+    margin-top: -19px;
+    margin-left: -282px;
+  }
+ }

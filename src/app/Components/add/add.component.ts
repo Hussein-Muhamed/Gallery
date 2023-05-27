@@ -40,7 +40,7 @@ export class AddComponent implements OnInit {
   myValidation = new FormGroup({
     name: new FormControl('', [
       Validators.required,
-      Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_]{2,15}$/i),
+      Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_ ]{2,25}$/i),
     ]),
     email: new FormControl('', [
       Validators.required,

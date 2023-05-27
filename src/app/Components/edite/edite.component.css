@@ -13,7 +13,7 @@
 }
 
 h4{
-  color:rgb(148 27 101);
+  color:#00ADB5;
 }
 .registration-form .item{
   border-radius: 20px;
@@ -32,12 +32,12 @@ h4{
   background-color: rgb(255, 255, 255);
   border:1px solid rgba(0, 0, 0, 0.236) !important;
   border: none;
-  color: rgb(148 27 101);
+  color: #00ADB5;
   margin-top: 20px;
 }
 
 .registration-form .create-account:hover{
-  background-color: rgb(148 27 101);
+  background-color: #00ADB5;
   color:white;
   border:0px;
   width: 100%;

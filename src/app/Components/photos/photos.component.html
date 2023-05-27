@@ -1,10 +1,10 @@
-<main id="cont" role="main">
-    <div class="album py-5 ">
-        <div class="container d-flex justify-content-center align-items-center">
+<main  role="main">
+    <div  class="album">
+        <div id="cont"  class="container d-flex justify-content-center align-items-center">
             <div class="row col-10 ">
-                <div *ngFor="let photo of Photos" class="col-md-2">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src={{photo.url}}
+                <div  *ngFor="let photo of Photos" class="col-md-2">
+                    <div id="imgContainer" class="card m-1 mb-4 box-shadow">
+                        <img id="photo" src={{photo.url}}
                             alt="Card image cap">
                     </div>
                 </div> 

@@ -2,6 +2,12 @@
     margin-top: 80px;
 }
 
+#card:hover{
+  box-shadow: 15px 20px 9px #4e4e4e;
+  transform: translateY(-15px);
+  cursor: pointer;
+}
+
 @media (max-width:768px) {
     #cont{
       margin-top: 210px;

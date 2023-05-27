@@ -1,0 +1,32 @@
+#cont{
+    margin-top: 110px;
+}
+
+#imgContainer{
+    border-radius: 50%;
+}
+
+#photo{
+    border-radius: 50%;
+}
+
+#photo:hover{
+    cursor: pointer;
+    scale:1.1;
+    border-radius: 50px;
+    animation: shake .5s 1 linear
+}
+
+@keyframes shake {
+  0%{transform:rotate(5deg)}
+  50%{transform:rotate(-5deg)}
+  100%{transform:rotate(0deg)}
+
+}
+
+
+@media (max-width:768px) {
+    #cont{
+      margin-top: 250px;
+    }
+}

@@ -13,7 +13,7 @@
 
 #title{
     font-family: 'About';
-    color:gray;
+    color:dimgrey;
     font-size: 30px;
     text-align: center;
     margin-top: -30px;
@@ -46,23 +46,18 @@
 
 }
 
-#hussein img,#aya img,{
+#hussein img,#aya img{
     width: 250px;
     height: 300px;
     margin-left: 20px;
 }
 
-/* #asmaa img{
-    margin-left: -20px;
-} */
-
 #aya img{
-    /* width: 200px;
-    height: 300px */
+    margin-left: 0px;
 }
 
 #hussContainer{
-    background-color: #750f2fc9;
+    background-color: #d14242c9;
 }
 
 #asmaaContainer{
@@ -75,19 +70,22 @@
 
 #hussContainer:hover{
     scale:1.2;
-    background-color: #993353;
+    background-color: #e35454;
+    transform: translateY(-20px);
 
 }
 
 #asmaaContainer:hover{
     scale:1.2;
     background-color: rgb(15 41 192 / 84%);
+    transform: translateY(-20px);
     
 }
 
 #ayaContainer:hover{
     scale:1.2;
     background-color: rgb(254 139 14 / 81%);
+    transform: translateY(-20px);
     
 }
 
@@ -96,6 +94,21 @@
     height: 50px !important;
     opacity: 0.8;
     margin-top: 20px;
+    animation:dance 1.5s infinite linear
+}
+
+@keyframes dance {
+    0%{transform:rotate(0deg);
+    }
+    50%{transform:rotate(3deg);
+    }
+    60%{transform:rotate(0deg);
+    }
+    70%{transform:rotate(-3deg);
+    }
+    100%{transform:rotate(0deg);
+        transform:translateY(0)
+    }
 }
 
 #icon:hover{
