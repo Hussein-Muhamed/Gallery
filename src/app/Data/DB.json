@@ -180,6 +180,18 @@
       },
       "password": "123456",
       "id": 12
+    },
+    {
+      "name": "asmaa",
+      "email": "asmaa@gmail.com",
+      "phone": "01224225524",
+      "address": {
+        "city": "KSA 🕋",
+        "street": "shobra",
+        "suite": 123
+      },
+      "password": "123456",
+      "id": 13
     }
   ],
   "albums": [

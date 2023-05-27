@@ -103,7 +103,7 @@ export class AddComponent implements OnInit {
   Add() {
     let alert: any = document.getElementById('alert');
 
-    alert.style.display = 'block';
+    alert.style.display = 'flex';
 
     setTimeout(() => {
       alert.style.display = 'none';
@@ -129,7 +129,7 @@ export class AddComponent implements OnInit {
         password:"123456"
       };
       this.UserService.AddUser(newUser).subscribe({next:()=>{  this.myevent.emit(newUser);}}); // this.router.navigate(['/users']);
-    
+
       this.myValidation.reset();
     }
   }

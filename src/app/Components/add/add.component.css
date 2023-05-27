@@ -1,5 +1,6 @@
 *{
   font-family:'Welcome';
+  caret-color: black;
 }
 
 .registration-form form{
@@ -55,12 +56,12 @@ h4{
 }
 
 #alert{
-  position: absolute;
+  /* position: absolute;
   top: 30px;
   left: 1250px;
   padding-left: 5px;
   height: 271px;
-  width: 390px;
+  width: 390px; */
 }
 
 #btn:hover{
