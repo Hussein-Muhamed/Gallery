@@ -120,6 +120,7 @@ export class WelcomeComponent {
     let userPassword = this.validation.value['password'];
     if (userEmail == 'admin@gmail.com' && userPassword == 'Admin@123') {
       this.router.navigate(['/landing']);
+      alert('Welcome Admin')
       return;
     }
 

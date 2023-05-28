@@ -9,7 +9,6 @@
     {
       "name": "Hussein",
       "email": "hussein@iti.com",
-      "password": "hussein1234",
       "phone": "01040190394",
       "address": {
         "city": "KSA 🕋",
@@ -21,19 +20,19 @@
     {
       "name": "Hamada",
       "email": "hamada@iti.com",
-      "password":"12345678",
+      "password": "aaaaaaaa",
       "phone": "01023232334",
       "address": {
-        "city": "USA 🗽",
-        "street": "Douglas ",
-        "suite": 3
+        "city": "KSA 🕋",
+        "street": "El Riad",
+        "suite": 2
       },
       "id": 3
     },
     {
       "name": "Asmaa Sabry",
       "email": "smsma@iti.com",
-      "password":"12345678",
+      "password": "12345678",
       "phone": "01232323234",
       "address": {
         "city": "KSA 🕋",
@@ -45,7 +44,7 @@
     {
       "name": "Aya Zain",
       "email": "Aya@iti.com",
-      "password":"12345678",
+      "password": "12345678",
       "phone": "01334342343",
       "address": {
         "city": "KSA 🕋",
