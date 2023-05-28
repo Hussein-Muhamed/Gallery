@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
 import { EditeComponent } from '../edite/edite.component';
 import { RemoveComponent } from '../remove/remove.component';
-
+import { LocationStrategy } from '@angular/common';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -11,7 +11,8 @@ import { RemoveComponent } from '../remove/remove.component';
 })
 export class LandingComponent implements OnInit {
   id:any
-  constructor(public UserService: UsersService,public route:ActivatedRoute, public router:Router) {}
+  constructor(public UserService: UsersService,public route:ActivatedRoute, public router:Router, private location: LocationStrategy) {
+  }
   
   Users: any;
 

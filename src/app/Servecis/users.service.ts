@@ -22,7 +22,7 @@ export class UsersService {
     return this.myClient.post(this.Base_URL,NewUser);
   }
   UpdateUser(id:any, NewUser:any){
-    return this.myClient.put(this.Base_URL+"/"+id, NewUser);
+    return this.myClient.patch(this.Base_URL+"/"+id, NewUser);
   }
   DeleteUser(id:any){
     return this.myClient.delete(this.Base_URL+"/"+id);

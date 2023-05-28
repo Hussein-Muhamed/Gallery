@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
@@ -6,40 +6,60 @@ import { UsersService } from 'src/app/Servecis/users.service';
 @Component({
   selector: 'app-edite',
   templateUrl: './edite.component.html',
-  styleUrls: ['./edite.component.css']
+  styleUrls: ['./edite.component.css'],
 })
-
 export class EditeComponent {
-  ID:any;
-  User:any;
-  constructor(private router: Router,myRoute:ActivatedRoute,public UsersService:UsersService){
-     this.ID = myRoute.snapshot.params["id"];
-     console.log(this.ID);
+  ID: any;
+  User: any;
+  @ViewChild('editElem')
+  public editmodelEle!: ElementRef;
+
+  constructor(
+    private router: Router,
+    public myRoute: ActivatedRoute,
+    public UsersService: UsersService
+  ) {
+    this.ID = myRoute.snapshot.params['id'];
+    console.log(this.ID);
   }
-   x :any ;
+  x: any;
+  ngAfterViewInit() {
+    this.editmodelEle.nativeElement.addEventListener('show.bs.modal', () => {
+      this.ID = this.myRoute.snapshot.params['id'];
+      this.ngOnInit();
+    });
+  }
+
   ngOnInit(): void {
-    console.log("hi here");
-    
+    console.log('hi here');
     this.UsersService.GetUserByID(this.ID).subscribe({
-      next:(data)=>{
-        this.User=data;
+      next: (data) => {
+        this.User = data;
         this.myValidation.get('name')?.setValue(this.User.name);
         this.myValidation.get('email')?.setValue(this.User.email);
         this.myValidation.get('phone')?.setValue(this.User.phone);
         this.myValidation.get('city')?.setValue(this.User.address.city);
         this.myValidation.get('street')?.setValue(this.User.address.street);
-        this.myValidation.get('streetNumber')?.setValue(this.User.address.suite);
+        this.myValidation
+          .get('streetNumber')
+          ?.setValue(this.User.address.suite);
       },
-      error:(err)=>{console.log(err)}
+      error: (err) => {
+        console.log(err);
+      },
     });
-
   }
 
   myValidation = new FormGroup({
-    name: new FormControl('', [Validators.required,Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_ ]{3,15}$/i)]),
+    name: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_ ]{3,15}$/i),
+    ]),
     email: new FormControl('', [
       Validators.required,
-      Validators.pattern(/^([a-zA-Z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/),
+      Validators.pattern(
+        /^([a-zA-Z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+      ),
     ]),
     phone: new FormControl('', [
       Validators.required,
@@ -76,13 +96,15 @@ export class EditeComponent {
   }
 
   Update() {
-    console.log("heloooooo" , this.ID);
-    console.log( this.Name.valid ,
-      this.Email.valid ,
-      this.Phone.valid ,
-      this.City.valid ,
-      this.Street.valid ,
-      this.Street_Num.valid);
+    console.log('heloooooo', this.ID);
+    console.log(
+      this.Name.valid,
+      this.Email.valid,
+      this.Phone.valid,
+      this.City.valid,
+      this.Street.valid,
+      this.Street_Num.valid
+    );
     if (
       this.Name.valid &&
       this.Email.valid &&
@@ -102,13 +124,11 @@ export class EditeComponent {
         phone: this.Phone.value,
         address,
       };
-      this.UsersService.UpdateUser(this.ID,newUser).subscribe(
-        {next:()=>{ this.router.navigate(['/landing']);}}
-      ); 
-    
-     
- 
+      this.UsersService.UpdateUser(this.ID, newUser).subscribe({
+        next: () => {
+          this.router.navigate(['/landing']);
+        },
+      });
     }
-  
   }
 }

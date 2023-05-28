@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UsersService } from 'src/app/Servecis/users.service';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/Servecis/auth.service';
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css'],
 })
 export class WelcomeComponent {
+  flagAdmin = false;
   flag = true;
   user: any;
   reset = true;
@@ -18,8 +20,15 @@ export class WelcomeComponent {
 
   baseUrl = 'http://localhost:3000/users';
 
-  constructor(public srv: UsersService, private router: Router) {}
+  constructor(
+    public srv: UsersService,
+    private router: Router,
+    private authSrv: AuthService
+  ) {}
 
+  onOutletLoaded(component: any) {
+    component.userType = this.flagAdmin ? 'admin' : 'user';
+  }
   get password() {
     return this.validation.controls['password'];
   }
@@ -89,8 +98,14 @@ export class WelcomeComponent {
       Validators.required,
       Validators.pattern('^01[0-2,5]{1}[0-9]{8}$'),
     ]),
-    city: new FormControl(null, [Validators.required, Validators.pattern('^[a-zA-Z]+$')]),
-    street: new FormControl(null, [Validators.required, Validators.pattern('^[a-zA-Z]+$')]),
+    city: new FormControl(null, [
+      Validators.required,
+      Validators.pattern('^[a-zA-Z]+$'),
+    ]),
+    street: new FormControl(null, [
+      Validators.required,
+      Validators.pattern('^[a-zA-Z]+$'),
+    ]),
     suite: new FormControl(null, [
       Validators.required,
       Validators.pattern('^[1-9]*$'),
@@ -101,7 +116,7 @@ export class WelcomeComponent {
     this.flag = true;
   }
 
-  goBack(){
+  goBack() {
     this.flag = true;
     this.reset = true;
   }
@@ -119,8 +134,12 @@ export class WelcomeComponent {
     let userEmail = this.validation.value['email'];
     let userPassword = this.validation.value['password'];
     if (userEmail == 'admin@gmail.com' && userPassword == 'Admin@123') {
+      localStorage.setItem('email', userEmail);
+      localStorage.setItem('password', userPassword);
+      this.flagAdmin = true;
+      this.authSrv.login(true, '');
       this.router.navigate(['/landing']);
-      alert('Welcome Admin')
+
       return;
     }
 
@@ -133,10 +152,11 @@ export class WelcomeComponent {
           this.credentials = false;
         } else {
           console.log('Login successfully 👌🏼');
-          this.router.navigate([`/Profile/Album/${this.user.id}`]);
           localStorage.setItem('email', this.user.email);
           localStorage.setItem('password', this.user.password);
           this.credentials = true;
+          this.authSrv.login(false, this.user.id);
+          this.router.navigate([`/Profile/Album/${this.user.id}`]);
         }
       },
       error: (err) => {
@@ -232,12 +252,12 @@ export class WelcomeComponent {
     });
   }
 
-  showPassword(){
-    let password:any = document.getElementById('floatingPassword') 
-    if(password.type == 'password'){
-      password.type = 'text'
+  showPassword() {
+    let password: any = document.getElementById('floatingPassword');
+    if (password.type == 'password') {
+      password.type = 'text';
     } else {
-      password.type = 'password'
+      password.type = 'password';
     }
   }
 }

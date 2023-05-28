@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/Servecis/auth.service';
 import { UsersService } from 'src/app/Servecis/users.service';
+
 
 @Component({
   selector: 'app-header',
@@ -12,7 +14,9 @@ export class HeaderComponent {
   User: any;
   email: any;
 
-  constructor(public srv: UsersService, public router: Router) {}
+ 
+ 
+  constructor(public srv: UsersService, public router: Router , private authSrv:AuthService) {}
 
   validation = new FormGroup({
     email: new FormControl('null', [
@@ -28,10 +32,7 @@ export class HeaderComponent {
       next: (data) => {
         this.User = data;
         this.User = this.User[0];
-        console.log(this.User);
         this.router.navigate([`/Profile/Album/${this.User.id}`]);
-        //! update component with new url 
-      
       },
       error: (err) => {
         console.log(err);
@@ -39,15 +40,17 @@ export class HeaderComponent {
     });
   }
 
-
-
   navigate() {
-    //! if admin -> landing
-    //! if user -> Home
+    if (this.authSrv.admin) this.router.navigate([`/landing`]);
+    else {
+      this.router.navigate([`/Profile/Album/${this.authSrv.UserId}`]);
+    }
   }
 
-  logo(){
-    //! if admin -> landing
-    //! if user -> Home
+  logo() {
+    if (this.authSrv.admin) this.router.navigate([`/landing`]);
+    else {
+      this.router.navigate([`/Profile/Album/${this.authSrv.UserId}`]);
+    }
   }
 }

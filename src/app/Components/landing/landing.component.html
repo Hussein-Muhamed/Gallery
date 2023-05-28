@@ -29,11 +29,11 @@
               </tr>
           </thead>
           <tbody>
-              <tr  *ngFor="let u of Users" class="text-center fs-5" style="font-weight: light;" >
+              <tr  *ngFor="let u of Users " class="text-center fs-5" style="font-weight: light;" >
                   <td routerLink="/Profile/Album/{{u.id}}" id="id">{{u.id}}</td>
                   <td routerLink="/Profile/Album/{{u.id}}" id="name">{{u.name}}</td>
-                  <td id="email">{{u.email}}</td>
-                  <td id="phone">{{u.phone}}</td>
+                  <td routerLink="/Profile/Album/{{u.id}}" id="email">{{u.email}}</td>
+                  <td routerLink="/Profile/Album/{{u.id}}" id="phone">{{u.phone}}</td>
                   <td id="address">{{u.address.suite+" " + u.address.street+" " + u.address.city}}</td>
 
                   <td  routerLink="/landing/edite/{{u.id}}" data-bs-target="#editModal" data-bs-toggle="modal" ><img src="assets/icos/edit.png" style="width: 35px;height: 37px;; cursor:pointer"></td>

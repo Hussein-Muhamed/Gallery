@@ -1,17 +1,24 @@
-import { Component } from '@angular/core';
+import { LocationStrategy } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { HostListener } from '@angular/core';
+import { LandingComponent } from '../landing/landing.component';
+import { ProfileComponent } from '../profile/profile.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  userType: any;
-  admin :any;
-  constructor(active: ActivatedRoute , private router: Router) {
-    this.userType = active.snapshot.params['id'];
-    if (this.userType == 0) this.admin = true;
-    else this.admin = false;
+export class HomeComponent implements OnInit {
+
+  constructor(
+    active: ActivatedRoute,
+    private router: Router,
+    private location: LocationStrategy,
+    private route: ActivatedRoute
+  ) {}
+  ngOnInit(): void {
+
   }
+ 
 }

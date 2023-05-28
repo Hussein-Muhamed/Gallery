@@ -166,3 +166,11 @@ button img:hover {
     margin-left: -282px;
   }
 }
+
+.body{
+  background-image: url('src/assets/images/bg1.jpg');
+}
+
+*{
+caret-color: transparent;
+}

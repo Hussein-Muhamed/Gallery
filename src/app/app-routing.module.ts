@@ -11,9 +11,10 @@ import { AddComponent } from './Components/add/add.component';
 import { ErrorComponent } from './Components/error/error.component';
 import { RemoveComponent } from './Components/remove/remove.component';
 import { AboutComponent } from './Components/about/about.component';
+import { authGuard } from './Guards/auth.guard'
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
+  { path: '', component: WelcomeComponent , canActivate:[authGuard]},
   {
     path: '',
     component: HomeComponent,

@@ -10,7 +10,7 @@ import { PhotosService } from 'src/app/Servecis/photos.service';
 })
 export class AlbumsComponent implements OnInit {
   Albums: any;
- UserId: any ;
+  UserId: any ;
   Photos: any;
   constructor(
     private srv: AlbumsService,
@@ -42,7 +42,7 @@ export class AlbumsComponent implements OnInit {
 
     let img:any = document.getElementById('img')
     console.log(img);
-    img.scr = 'assets/images/MicrosoftTeams-image.png'
+    img.src = 'assets/images/MicrosoftTeams-image.png'
   }
   getphotos(albumId: any) {
     return Object.values(this.Photos).filter((x: any) => x.albumId == albumId).length;

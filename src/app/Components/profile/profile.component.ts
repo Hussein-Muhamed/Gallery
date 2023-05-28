@@ -1,7 +1,9 @@
 import { Component,Input,OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from 'src/app/Servecis/users.service';
-
+import { LocationStrategy } from '@angular/common';
+import { PhotosComponent } from '../photos/photos.component';
+import { AlbumsComponent } from '../albums/albums.component';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -9,13 +11,11 @@ import { UsersService } from 'src/app/Servecis/users.service';
 })
 export class ProfileComponent implements OnInit {
 
-  admin = true
   user:any
   id :any
 
-  constructor(public userService:UsersService, public router:ActivatedRoute){
+  constructor(public userService:UsersService, public router:ActivatedRoute ,  private location: LocationStrategy){
     this.id =  this.router.snapshot.firstChild?.params['id'] ;
-     console.log("id" , this.id)
   }
 
   ngOnInit() :void{

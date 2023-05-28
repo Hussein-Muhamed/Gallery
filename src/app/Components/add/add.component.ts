@@ -24,8 +24,7 @@ import { UsersService } from 'src/app/Servecis/users.service';
 export class AddComponent implements OnInit {
   @Output() myevent = new EventEmitter();
 
-  @ViewChild('myname')
-  public addModelElem!: ElementRef;
+  @ViewChild('myname') public addModelElem!: ElementRef;
 
 
   constructor(private router: Router, public UserService: UsersService) {
