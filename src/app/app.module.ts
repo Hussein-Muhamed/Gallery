@@ -18,6 +18,7 @@ import { ErrorComponent } from './Components/error/error.component';
 import { HomeComponent } from './Components/home/home.component';
 import { RemoveComponent } from './Components/remove/remove.component';
 import { AboutComponent } from './Components/about/about.component';
+import { FilterUsersPipe } from './Pipes/filter-users.pipe';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { AboutComponent } from './Components/about/about.component';
     HomeComponent,
     RemoveComponent,
     AboutComponent,
+    FilterUsersPipe,
   ],
   imports: [
     BrowserModule,

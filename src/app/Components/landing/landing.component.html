@@ -29,7 +29,7 @@
               </tr>
           </thead>
           <tbody>
-              <tr  *ngFor="let u of Users " class="text-center fs-5" style="font-weight: light;" >
+              <tr  *ngFor="let u of Users | filterUsers" class="text-center fs-5" style="font-weight: light;" >
                   <td routerLink="/Profile/Album/{{u.id}}" id="id">{{u.id}}</td>
                   <td routerLink="/Profile/Album/{{u.id}}" id="name">{{u.name}}</td>
                   <td routerLink="/Profile/Album/{{u.id}}" id="email">{{u.email}}</td>

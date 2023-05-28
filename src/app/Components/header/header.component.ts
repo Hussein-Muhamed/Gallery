@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/Servecis/auth.service';
+import { FilterService } from 'src/app/Servecis/filter.service';
 import { UsersService } from 'src/app/Servecis/users.service';
 
 
@@ -13,10 +14,10 @@ import { UsersService } from 'src/app/Servecis/users.service';
 export class HeaderComponent {
   User: any;
   email: any;
-
+  searchValue:any;
  
  
-  constructor(public srv: UsersService, public router: Router , private authSrv:AuthService) {}
+  constructor(public srv: UsersService, public router: Router , private authSrv:AuthService , private filterSrv:FilterService) {}
 
   validation = new FormGroup({
     email: new FormControl('null', [
@@ -52,5 +53,9 @@ export class HeaderComponent {
     else {
       this.router.navigate([`/Profile/Album/${this.authSrv.UserId}`]);
     }
+  }
+  onKey(x:any)
+  {
+    this.filterSrv.setSearchWord( x.target.value);
   }
 }
