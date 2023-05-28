@@ -36,7 +36,7 @@ export class EditeComponent {
   }
 
   myValidation = new FormGroup({
-    name: new FormControl('', [Validators.required,Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_]{5,15}$/i)]),
+    name: new FormControl('', [Validators.required,Validators.pattern(/^[a-zA-Z][a-zA-Z0-9_ ]{3,15}$/i)]),
     email: new FormControl('', [
       Validators.required,
       Validators.pattern(/^([a-zA-Z0-9_\.\+-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/),

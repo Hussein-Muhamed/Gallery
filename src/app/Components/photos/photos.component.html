@@ -2,7 +2,7 @@
     <div  class="album">
         <div id="cont"  class="container d-flex justify-content-center align-items-center">
             <div class="row col-10 ">
-                <div  *ngFor="let photo of Photos" class="col-md-2">
+                <div  *ngFor="let photo of Photos"  class="col-md-2">
                     <div id="imgContainer" class="card m-1 mb-4 box-shadow">
                         <img id="photo" src={{photo.url}}
                             alt="Card image cap">
@@ -12,3 +12,7 @@
         </div>
     </div>
 </main>
+
+<!-- <ng-template #loading> -->
+    <!-- <img src="assets/images/loading2.gif" style="width: 700px;height: 700px;margin-top: 100px;margin-left: 500px ;" > -->
+<!-- </ng-template> -->

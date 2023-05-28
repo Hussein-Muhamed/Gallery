@@ -30,13 +30,16 @@ export class HeaderComponent {
         this.User = this.User[0];
         console.log(this.User);
         this.router.navigate([`/Profile/Album/${this.User.id}`]);
-     
+        //! update component with new url 
+      
       },
       error: (err) => {
         console.log(err);
       },
     });
   }
+
+
 
   navigate() {
     //! if admin -> landing

@@ -1,7 +1,7 @@
 
 #row{
     gap:100px;
-    margin:50px 0 80px 0
+    margin:50px 0 200px 0
 }
 
 #head{
@@ -46,11 +46,10 @@
 
 }
 
-#hussein img,#aya img{
-    width: 250px;
-    height: 300px;
-    margin-left: 20px;
+#hussein img{
+    margin-left: 30px;
 }
+
 
 #aya img{
     margin-left: 0px;
@@ -58,35 +57,36 @@
 
 #hussContainer{
     background-color: #d14242c9;
+    margin-bottom: 15px;
 }
 
 #asmaaContainer{
-    background-color: rgb(15 41 192 / 60%)
+    background-color: rgb(15 41 192 / 60%);
+    margin-bottom: 15px;
 }
 
 #ayaContainer{
     background-color: rgba(255, 133, 2, 0.6);
+    margin-bottom: 15px;
 }
 
 #hussContainer:hover{
-    scale:1.2;
+    scale:1.05;
+    transform: translateY(-10px);
     background-color: #e35454;
-    transform: translateY(-20px);
-
 }
 
 #asmaaContainer:hover{
-    scale:1.2;
+    scale:1.05;
+    transform: translateY(-10px);
     background-color: rgb(15 41 192 / 84%);
-    transform: translateY(-20px);
     
 }
 
 #ayaContainer:hover{
-    scale:1.2;
+    scale:1.05;
+    transform: translateY(-10px);
     background-color: rgb(254 139 14 / 81%);
-    transform: translateY(-20px);
-    
 }
 
 #icon{
@@ -94,22 +94,13 @@
     height: 50px !important;
     opacity: 0.8;
     margin-top: 20px;
-    animation:dance 1.5s infinite linear
 }
 
-@keyframes dance {
-    0%{transform:rotate(0deg);
-    }
-    50%{transform:rotate(3deg);
-    }
-    60%{transform:rotate(0deg);
-    }
-    70%{transform:rotate(-3deg);
-    }
-    100%{transform:rotate(0deg);
-        transform:translateY(0)
-    }
+
+#icon:hover{
+    transform: translateY(-5px)
 }
+
 
 #icon:hover{
     opacity: 1;
