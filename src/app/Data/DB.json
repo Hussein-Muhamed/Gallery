@@ -13,8 +13,8 @@
       "email": "Sincere@april.biz",
       "password": 12345678,
       "address": {
-        "city": "ldhioh",
-        "street": "Helllo",
+        "city": "Aya",
+        "street": "Star",
         "suite": 1
       },
       "phone": "01025426587",
@@ -254,6 +254,19 @@
       },
       "password": "123456",
       "id": 12
+    },
+    {
+      "name": "Aya Zain",
+      "username": "Aya",
+      "email": "aya@gmail.com",
+      "password": "123456",
+      "phone": "01026565656",
+      "address": {
+        "city": "qdqwas",
+        "street": "fasf",
+        "suite": "5"
+      },
+      "id": 13
     }
   ],
   "albums": [

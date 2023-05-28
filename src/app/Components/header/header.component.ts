@@ -57,5 +57,6 @@ export class HeaderComponent {
   onKey(x:any)
   {
     this.filterSrv.setSearchWord( x.target.value);
+
   }
 }

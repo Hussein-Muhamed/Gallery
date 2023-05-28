@@ -14,8 +14,11 @@ export class ProfileComponent implements OnInit {
   user:any
   id :any
 
-  constructor(public userService:UsersService, public router:ActivatedRoute ,  private location: LocationStrategy){
+  constructor(public userService:UsersService, public router:ActivatedRoute ,  private location: LocationStrategy ){
     this.id =  this.router.snapshot.firstChild?.params['id'] ;
+    router.params.subscribe((val:any) => {
+      this.id =  this.router.snapshot.firstChild?.params['id'] ;
+    });
   }
 
   ngOnInit() :void{

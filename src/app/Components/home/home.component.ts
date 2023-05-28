@@ -9,16 +9,6 @@ import { ProfileComponent } from '../profile/profile.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
-
-  constructor(
-    active: ActivatedRoute,
-    private router: Router,
-    private location: LocationStrategy,
-    private route: ActivatedRoute
-  ) {}
-  ngOnInit(): void {
-
-  }
- 
+export class HomeComponent {
+  constructor() {}
 }

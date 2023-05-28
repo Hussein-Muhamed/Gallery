@@ -12,6 +12,7 @@ import { ErrorComponent } from './Components/error/error.component';
 import { RemoveComponent } from './Components/remove/remove.component';
 import { AboutComponent } from './Components/about/about.component';
 import { authGuard } from './Guards/auth.guard'
+import { landingGuard } from './Guards/landing.guard';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent , canActivate:[authGuard]},
@@ -22,14 +23,14 @@ const routes: Routes = [
       { path: 'landing', component: LandingComponent,children:[
         { path: 'edite/:id', component: EditeComponent },
         { path:'delete/:id',component: RemoveComponent},
-      ] },
+      ] ,  canActivate:[landingGuard] },
       {
         path: 'Profile',
         component: ProfileComponent,
         children: [
           { path: 'Album/:id', component: AlbumsComponent },
           { path: 'Photos/:id', component: PhotosComponent },
-        ],
+        ],canActivate:[landingGuard] 
       },
       { path: 'aboutUs', component:AboutComponent},
     ],

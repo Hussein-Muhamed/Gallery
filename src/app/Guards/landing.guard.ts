@@ -9,16 +9,16 @@ import { AuthService } from '../Servecis/auth.service';
 @Injectable({
   providedIn: 'root',
 })
-export class authGuard implements CanActivate {
+
+export class landingGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
     let isLoggedIn = this.authService.isAuthenticated();
     if (isLoggedIn) {
-      if (this.authService.admin) this.router.navigate(['/landing']);
-      else this.router.navigate([`/Profile/Album/${this.authService.UserId}`]);
-      return false;
-    } else {
       return true;
+    } else {
+      this.router.navigate([`/`]);
+      return false ;
     }
   }
 }
