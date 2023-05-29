@@ -8,21 +8,16 @@
   "users": [
     {
       "id": 1,
-      "name": "Leanne Graham",
+      "name": "Aya Ashraf",
       "username": "Bret",
-      "email": "Sincere@april.biz",
-      "password": 12345678,
+      "email": "Aya@iti.com",
+      "password": "123456",
       "address": {
-        "street": "Kulas Light",
-        "suite": "Apt. 556",
         "city": "Gwenborough",
-        "zipcode": "92998-3874",
-        "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
-        }
+        "street": "Kulas Light",
+        "suite": 6
       },
-      "phone": "1-770-736-8031 x56442",
+      "phone": "012342142323",
       "website": "hildegard.org",
       "company": {
         "name": "Romaguera-Crona",
@@ -32,9 +27,9 @@
     },
     {
       "id": 2,
-      "name": "Hamada",
+      "name": "John Maxim",
       "username": "Hamada",
-      "email": "Hamada@iti.net",
+      "email": "jhon-maxim@iti.net",
       "password": 12345678,
       "address": {
         "street": "133 Gesr El Suez",
@@ -52,30 +47,6 @@
         "name": "Deckow-Crist",
         "catchPhrase": "Proactive didactic contingency",
         "bs": "synergize scalable supply-chains"
-      }
-    },
-    {
-      "id": 3,
-      "name": "Clementine Bauch",
-      "username": "Samantha",
-      "email": "Nathan@yesenia.net",
-      "password": 12345678,
-      "address": {
-        "street": "Douglas Extension",
-        "suite": "Suite 847",
-        "city": "McKenziehaven",
-        "zipcode": "59590-4157",
-        "geo": {
-          "lat": "-68.6102",
-          "lng": "-47.0653"
-        }
-      },
-      "phone": "1-463-123-4447",
-      "website": "ramiro.info",
-      "company": {
-        "name": "Romaguera-Jacobson",
-        "catchPhrase": "Face to face bifurcated interface",
-        "bs": "e-enable strategic applications"
       }
     },
     {
@@ -245,6 +216,31 @@
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
       }
+    },
+    {
+      "name": "Hussein Mohamed",
+      "username": "Hussein",
+      "email": "Hussein@yahoo.com",
+      "password": "1234567",
+      "phone": "01023234232",
+      "address": {
+        "city": "Cairo",
+        "street": "ElZamelek",
+        "suite": "21"
+      },
+      "id": 11
+    },
+    {
+      "name": "Asmaa Sabry",
+      "email": "asmaa@iti.com",
+      "phone": "01232312423",
+      "address": {
+        "city": "KSA 🕋",
+        "street": "El Riad",
+        "suite": 3
+      },
+      "password": "123456",
+      "id": 12
     }
   ],
   "albums": [
@@ -347,56 +343,6 @@
       "userId": 2,
       "id": 20,
       "title": "voluptas rerum iure ut enim"
-    },
-    {
-      "userId": 3,
-      "id": 21,
-      "title": "repudiandae voluptatem optio est consequatur rem in temporibus et"
-    },
-    {
-      "userId": 3,
-      "id": 22,
-      "title": "et rem non provident vel ut"
-    },
-    {
-      "userId": 3,
-      "id": 23,
-      "title": "incidunt quisquam hic adipisci sequi"
-    },
-    {
-      "userId": 3,
-      "id": 24,
-      "title": "dolores ut et facere placeat"
-    },
-    {
-      "userId": 3,
-      "id": 25,
-      "title": "vero maxime id possimus sunt neque et consequatur"
-    },
-    {
-      "userId": 3,
-      "id": 26,
-      "title": "quibusdam saepe ipsa vel harum"
-    },
-    {
-      "userId": 3,
-      "id": 27,
-      "title": "id non nostrum expedita"
-    },
-    {
-      "userId": 3,
-      "id": 28,
-      "title": "omnis neque exercitationem sed dolor atque maxime aut cum"
-    },
-    {
-      "userId": 3,
-      "id": 29,
-      "title": "inventore ut quasi magnam itaque est fugit"
-    },
-    {
-      "userId": 3,
-      "id": 30,
-      "title": "tempora assumenda et similique odit distinctio error"
     },
     {
       "userId": 4,

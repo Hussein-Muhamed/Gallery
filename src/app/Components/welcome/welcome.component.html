@@ -50,6 +50,9 @@
                 <div *ngIf="email.value && email.invalid">
                   <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">Invalid Email!</p>
                 </div>
+                <div *ngIf="signUpEmailExits" >
+                  <img src="assets/icos/exclamation-mark.png" style="width: 20px;height: 20px;"><p style="color:red;display: inline-block;padding-left: 5px;">This Email is already Exits!</p>
+                </div>
 
 
                 <!-- Password input -->

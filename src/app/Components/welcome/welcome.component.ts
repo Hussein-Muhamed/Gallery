@@ -15,6 +15,7 @@ export class WelcomeComponent {
   reset = true;
   passwordNotMatched = false;
   emailNotExists = false;
+  signUpEmailExits = false;
 
   credentials = true;
 
@@ -198,12 +199,14 @@ export class WelcomeComponent {
             };
             this.srv.AddUser(user).subscribe();
             console.log('Successfully');
+            this.signUpEmailExits = false
             this.flag = true;
           } else {
             console.log('Invalid data!');
           }
         } else {
           console.log('This Email is Already Exist !!');
+          this.signUpEmailExits = true
           this.flag = false;
         }
       },

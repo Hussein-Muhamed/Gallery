@@ -1,21 +1,21 @@
 
     <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light  shadow-sm" >
         <div class="container">
-        <a class="navbar-brand d-flex justify-content-center  rounded " (click)="logo()" style="width: 200px; height: 60px; "><img src="assets/logo/logo2.gif" ><i class="fa-solid fa-shop me-2 align-self-center "><b style="color: #222831;cursor: pointer;" class="h4">GALLERY</b></i></a>
+        <a class="navbar-brand d-flex justify-content-center  rounded " (click)="logo()" style="width: 200px; height: 60px; "><img src="assets/imgs/ds2.gif" style="scale:1.5;"  ><i class="fa-solid fa-shop me-2 align-self-center "><b style="color: #222831;cursor: pointer;" class="h4">GALLERY</b></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     
         <div class=" my-3 d-lg-none d-sm-block d-xs-block">
             <div class="input-group">
-            <input type="text" class="form-control" [(ngModel)]="email"  (keyup)="onKey($event)" style="color:#00ADB5">
+            <input type="text" class="form-control" [(ngModel)]="email"  (keyup)="onKey($event)" style="color:#00ADB5;caret-color: black;">
             <button   class="btn text-white"  style="background-color:#00ADB5;" (click)="search()">Search</button>
             </div>
         </div>
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
             <div class="ms-auto d-none d-lg-block">
             <div class="input-group">
-                <input type="text" class="form-control " [(ngModel)]="email" (keyup)="onKey($event)"  style="color:#00ADB5; border-color:#00ADB5;">
+                <input type="text" class="form-control " [(ngModel)]="email" (keyup)="onKey($event)"  style="color:#00ADB5; border-color:#00ADB5;caret-color: black;">
                 <button   class="btn text-white" style="background-color:#00ADB5;" (click)="search()">Search</button>
             </div>
             </div>

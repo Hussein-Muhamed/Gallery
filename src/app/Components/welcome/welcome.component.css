@@ -1,6 +1,9 @@
 * {
   font-family: "Welcome";
-  caret-color: transparent;
+}
+
+input{
+  caret-color: black;
 }
 
 #hidden {
